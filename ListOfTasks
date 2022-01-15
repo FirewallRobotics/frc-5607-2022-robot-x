@@ -1,0 +1,35 @@
+Intake:
+
+Start intake
+Eat cargo
+Kill intake
+Count of balls
+
+Drive:
+
+Autonomous routine = (moving off the line, using vision to find ball, find goal, and shoot)
+Forward
+Backward
+Diagonally 
+Left
+Right
+
+Climbing:
+
+(going for 6 point)
+Extend
+retract
+
+Shooter:
+
+Teleop shooting
+Start motors
+Kill motors
+Autonomous shooting
+
+Vision:
+
+Aiming in teleop
+Identifying balls
+Identifying goal
+Identify robots
