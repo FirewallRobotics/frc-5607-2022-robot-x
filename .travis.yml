@@ -1,15 +1,17 @@
 before_script:
   - wget --quiet https://github.com/wpilibsuite/allwpilib/releases/download/v2022.1.1/WPILib_Linux-2022.1.1.tar.gz -O /tmp/wpilib.tar.gz
   - mkdir /tmp/frc2022
+  - mkdir /tmp/frc2022-artifacts
   - tar -zxf /tmp/wpilib.tar.gz -C /tmp/frc2022
   - ls -l /tmp/frc2022
+  - tar -zxf /tmp/frc2022/WPILib_Linux-2022.1.1-artifacts.tar.gz -C /tmp/frc2022-artifacts
+  - ls -l /tmp/frc2022-artifacts
 
 language:
   java
 
 script:
-  - export JAVA_HOME=/tmp/frc2022/jdk
-  - chmod 0755 gradlew
+  - export JAVA_HOME=/tmp/frc2022-artifacts/jdk
   - ./gradlew build
 
 # Generate javadocs and move to the docs folder for GitHub Pages support  
