@@ -1,0 +1,25 @@
+before_script:
+  - wget --quiet https://github.com/wpilibsuite/allwpilib/releases/download/v2022.1.1/WPILib_Linux-2022.1.1.tar.gz -O /tmp/wpilib.tar.gz
+  - mkdir /tmp/frc2022
+  - tar -zxf /tmp/wpilib.tar.gz -C /tmp/frc2022
+  - ls -l /tmp/frc2022
+
+language:
+  java
+
+script:
+  - export JAVA_HOME=/tmp/frc2022/jdk
+  - ./gradlew build
+
+# Generate javadocs and move to the docs folder for GitHub Pages support  
+# after_success:
+#  - ./gradlew javadoc
+
+# deploy:
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+#   keep-history: true
+#   on:
+#     branch: master
+#   local-dir: ./build/docs/
