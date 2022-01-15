@@ -10,9 +10,10 @@ Drive:
 Autonomous routine = (moving off the line, using vision to find ball, find goal, and shoot)
 Forward
 Backward
-Diagonally 
 Left
 Right
+45, -45, 135, -135
+cool trippy macanam stuff... maybe 
 
 Climbing:
 
@@ -22,14 +23,14 @@ retract
 
 Shooter:
 
-Teleop shooting
 Start motors
 Kill motors
-Autonomous shooting
+shoot the ball
 
 Vision:
 
 Aiming in teleop
-Identifying balls
-Identifying goal
+Identifying balls- need for distiction of red and blue???
+Identifying goal- with reflective tape?
 Identify robots
+Identifying obstacles 
