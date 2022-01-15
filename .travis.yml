@@ -9,6 +9,7 @@ language:
 
 script:
   - export JAVA_HOME=/tmp/frc2022/jdk
+  - chmod 0755 gradlew
   - ./gradlew build
 
 # Generate javadocs and move to the docs folder for GitHub Pages support  
