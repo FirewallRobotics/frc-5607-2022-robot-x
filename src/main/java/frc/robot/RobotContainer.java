@@ -43,6 +43,7 @@ public class RobotContainer {
     public final Shooter m_shooter = new Shooter();
     public final Intake m_intake = new Intake();
     public final DriveTrain m_driveTrain = new DriveTrain();
+    public final Lights m_lights = new Lights();
 
 // Joysticks
 private final XboxController xboxController2 = new XboxController(1);
