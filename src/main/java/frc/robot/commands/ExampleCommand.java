@@ -9,6 +9,11 @@ public class ExampleCommand extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final DriveTrain m_drive;
 
+
+
+
+
+
   /**
    * Creates a new ExampleCommand.
    *
@@ -22,7 +27,5 @@ public class ExampleCommand extends CommandBase {
 @Override
 public void execute() {
   DriveTrain.Drive(1, 1, 1);
-}
-
-
+    }
 }
