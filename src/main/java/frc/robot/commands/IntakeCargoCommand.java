@@ -5,23 +5,23 @@ import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */
-public class ExampleCommand extends CommandBase {
+public class IntakeCargoCommand extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-  private final DriveTrain m_drive;
+  private final Intake m_intake;
 
   /**
-   * Creates a new ExampleCommand.
+   * Creates a new IntakeCargoCommand.
    *
    * @param subsystem The subsystem used by this command.
    */
-  public ExampleCommand(DriveTrain subsystem) {
-    m_drive = subsystem;
+  public IntakeCargoCommand(Intake subsystem) {
+    m_intake = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
 @Override
 public void execute() {
-  DriveTrain.Drive(1, 1, 1);
+  //Write intake code here
 }
 
 
