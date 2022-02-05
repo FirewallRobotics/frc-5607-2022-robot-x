@@ -1,17 +1,14 @@
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj2.command.CommandBase;
 import java.lang.module.ModuleDescriptor.Requires;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj2.command.Subsystem;
-/** An example command that uses an example subsystem. */
-public class ClimberExtendCommand extends CommandBase {
-  
-  
-  
-  
-  @Override
+
+public class ClimberStopCommand extends CommandBase {
+    @Override
   public void initialize() {
 
   }
@@ -20,11 +17,11 @@ public class ClimberExtendCommand extends CommandBase {
   private final Climbing m_climbing;
 
   /**
-   * Creates a new ClimberExtendCommand.
+   * Creates a new ClimberStopCommand.
    *
    * @param subsystem The subsystem used by this command.
    */
-  public ClimberExtendCommand(Climbing subsystem) {
+  public ClimberStopCommand(Climbing subsystem) {
     m_climbing = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
@@ -32,7 +29,7 @@ public class ClimberExtendCommand extends CommandBase {
 @Override
 public void execute() {
   //Write code for climbing here
-  Climbing.ClimberExtendCommand();
+  Climbing.ClimberStopCommand();
 }
 @Override
 public boolean isFinished() {
@@ -44,11 +41,5 @@ public
  void end(boolean interrupted) {
   Climbing.ClimberStopCommand();
 }
-
-//@Override
-//protected void interrupted() {
-
+    
 }
-
-//}
-
