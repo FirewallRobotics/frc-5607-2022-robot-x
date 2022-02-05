@@ -97,9 +97,10 @@ mecanumDrive.setMaxOutput(1.0);
     
 
     // Put methods for controlling this subsystem
-    // here. Call these from Commands.
-    public static void Drive(double ySpeed, double xSpeed, double zRotation) {
+    // here. Call these from Cnommands.
+    public void Drive(double ySpeed, double xSpeed, double zRotation) {
         mecanumDrive.driveCartesian(ySpeed, xSpeed, zRotation);
+
     }
 }
 

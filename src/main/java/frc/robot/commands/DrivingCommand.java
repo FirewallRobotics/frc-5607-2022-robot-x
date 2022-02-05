@@ -26,6 +26,5 @@ public class DrivingCommand extends CommandBase {
   }
 @Override
 public void execute() {
-  DriveTrain.Drive(1, 1, 1);
-    }
+  }
 }
