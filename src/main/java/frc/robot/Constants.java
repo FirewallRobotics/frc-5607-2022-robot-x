@@ -35,4 +35,9 @@ public class Constants {
     public static final int Shooter1 = 8;
     public static final int LedRelay = 1;
   }
+
+  public static final class IntakeConstants {
+
+    public static final int MoveBot = 2;
+  }
 }
