@@ -1,12 +1,12 @@
 package frc.robot.commands;
 
-
-import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.*;
 
 /** An example command that uses an example subsystem. */
 public class ShootingCargoCommand extends CommandBase {
-  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
+
+  @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
   private final Shooter m_shooter;
 
   /**
@@ -19,10 +19,9 @@ public class ShootingCargoCommand extends CommandBase {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
-@Override
-public void execute() {
-  //Write code for shooting here
-}
 
-
+  @Override
+  public void execute() {
+    //Write code for shooting here
+  }
 }

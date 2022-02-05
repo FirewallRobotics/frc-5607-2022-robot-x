@@ -8,7 +8,6 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-
 package frc.robot;
 
 /**
@@ -21,20 +20,19 @@ package frc.robot;
  */
 public class Constants {
 
-    public static final class DriveConstants {
-      public static final int kFrontRightDriveTrain = 1;
-      public static final int kBackRightDriveTrain = 2;
-      public static final int kFrontLeftDriveTrain = 4;
-      public static final int kBackLeftDriveTrain = 5; 
-    }
-    public static final class ClimbingConstants {
-      
-    }
+  public static final class DriveConstants {
 
-    public static final class ShooterConstants {
-      public static final int Shooter1 = 8;
-      public static final int LedRelay = 1;
-    }
+    public static final int kFrontRightDriveTrain = 1;
+    public static final int kBackRightDriveTrain = 2;
+    public static final int kFrontLeftDriveTrain = 4;
+    public static final int kBackLeftDriveTrain = 5;
+  }
 
+  public static final class ClimbingConstants {}
+
+  public static final class ShooterConstants {
+
+    public static final int Shooter1 = 8;
+    public static final int LedRelay = 1;
+  }
 }
-
