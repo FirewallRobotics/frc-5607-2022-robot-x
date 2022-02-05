@@ -96,10 +96,3 @@ talonSRXRC = new WPI_TalonSRX(7);
         System.out.println("Stoping...");
     }
 }  
-
-
-    
-
-    
-
-
