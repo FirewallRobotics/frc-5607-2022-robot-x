@@ -19,9 +19,7 @@ public class DrivingCommand extends CommandBase {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
-
-  @Override
-  public void execute() {
-    DriveTrain.Drive(1, 1, 1);
+@Override
+public void execute() { 
   }
 }
