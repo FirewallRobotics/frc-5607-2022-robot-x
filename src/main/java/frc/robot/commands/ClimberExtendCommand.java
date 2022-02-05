@@ -26,15 +26,9 @@ public class ClimberExtendCommand extends CommandBase {
     addRequirements(subsystem);
   }
 
-@Override
-public
- void end(boolean interrupted) {
-  Climbing.ClimberStopCommand();
-}
-
   @Override
   public void end(boolean interrupted) {
-    Climbing.stopClimbing();
+    Climbing.ClimberStopCommand();
   }
   //@Override
   //protected void interrupted() {
