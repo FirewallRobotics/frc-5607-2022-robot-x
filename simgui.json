@@ -1,0 +1,45 @@
+{
+  "HALProvider": {
+    "Other Devices": {
+      "Talon SRX[0]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[0]/Analog In": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[1]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[2]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[3]": {
+        "header": {
+          "open": true
+        }
+      }
+    }
+  },
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Climbing": "Subsystem",
+      "/LiveWindow/DriveTrain": "Subsystem",
+      "/LiveWindow/DriveTrain/Mecanum Drive": "MecanumDrive",
+      "/LiveWindow/Intake": "Subsystem",
+      "/LiveWindow/Shooter": "Subsystem",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/LiveWindow/Vision": "Subsystem",
+      "/SmartDashboard/Auto Mode": "String Chooser",
+      "/SmartDashboard/Autonomous Command": "Command"
+    }
+  }
+}

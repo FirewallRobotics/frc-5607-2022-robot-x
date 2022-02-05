@@ -27,6 +27,14 @@ public class Constants {
       public static final int kFrontLeftDriveTrain = 4;
       public static final int kBackLeftDriveTrain = 5; 
     }
+    public static final class ClimbingConstants {
+      
+    }
+
+    public static final class ShooterConstants {
+      public static final int Shooter1 = 8;
+      public static final int LedRelay = 1;
+    }
 
 }
 
