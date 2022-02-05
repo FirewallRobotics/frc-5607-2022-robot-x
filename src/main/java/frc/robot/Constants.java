@@ -8,7 +8,6 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-
 package frc.robot;
 
 /**
@@ -37,6 +36,7 @@ public class Constants {
       public static final int Shooter1 = 8;
       public static final int LedRelay = 1;
     }
-
+  public static final class IntakeConstants {
+    public static final int MoveBot = 2;
+  }
 }
-
