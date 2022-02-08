@@ -49,8 +49,23 @@ public class Constants {
   public static final class FlushConstants {
 
     public static final int FlushTime = 1;
+
+    public static final int autoShootTimeout = 2;
   }
 }
-   public static final int autoShootTimeout = 2;
+lic static final int LedRelay = 1;
+    public static final int autoShootTimeout = 2;
+  }
+
+  public static final class IntakeConstants {
+
+    public static final int MoveBot = 2;
+  }
+
+  public static final class FlushConstants {
+
+    public static final int FlushTime = 1;
+  
+    public static final int autoShootTimeout = 2;
   }
 }
