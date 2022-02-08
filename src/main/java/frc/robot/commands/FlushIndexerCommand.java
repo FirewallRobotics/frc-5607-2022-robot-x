@@ -35,7 +35,7 @@ public class FlushIndexerCommand extends Command {
     //protected void end() {
     //    Intake.stop();
     //}
-    protected void interrupted() {
+    //protected void interrupted() {
 
-    }
+    //}
 }
