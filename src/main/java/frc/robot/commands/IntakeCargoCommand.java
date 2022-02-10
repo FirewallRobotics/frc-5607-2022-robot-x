@@ -17,9 +17,9 @@ public class IntakeCargoCommand extends CommandBase {
   public IntakeCargoCommand(Intake subsystem) {
     m_intake = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
-    ///addRequirements(subsystem);
+    addRequirements(subsystem);
   }
 
   @Override
-  public void execute() {}
+  public void execute() { m_intake.intakePowerCell(); }
 }

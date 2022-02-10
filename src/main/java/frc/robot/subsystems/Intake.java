@@ -94,7 +94,7 @@ public class Intake extends SubsystemBase {
 
   public void intakePowerCell() {
     //if (!intakeSwitch.get()){
-    //intakeVictor.set(IntakeConstants.INTAKER_MOTOR_SPEED);
+    intakeVictor.set(0.5);
     //}
     //else{
     //    intakeMotor.set(0);
