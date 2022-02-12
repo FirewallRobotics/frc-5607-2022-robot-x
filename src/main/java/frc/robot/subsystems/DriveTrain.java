@@ -129,8 +129,23 @@ public class DriveTrain extends SubsystemBase {
     // Put methods for controlling this subsystem
     // here. Call these from Cnommands.
     public void Drive(double ySpeed, double xSpeed, double zRotation) {
-        mecanumDrive.driveCartesian(ySpeed, xSpeed, zRotation);
-   
-  
+      double y = 0;           //variable for forward/backward movement
+	double x = 0;           //variable for side to side movement
+	double turn = 0;        //variable for turning movement
+	double deadzone = 0.2;
+  double turnDeadzone = 0.1;	
+
+	if(ySpeed > deadzone || ySpeed < -deadzone) {
+		y = ySpeed;
+	}
+
+	if(xSpeed > deadzone || xSpeed < -deadzone) {
+		x = xSpeed;
+	}
+
+	if(zRotation > deadzone || zRotation < -deadzone){
+		turn = zRotation;
+	}
+        mecanumDrive.driveCartesian(.75*y, .75*x, .75*turn);
   }
 }
