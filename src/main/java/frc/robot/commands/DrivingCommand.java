@@ -20,6 +20,6 @@ public class DrivingCommand extends CommandBase {
     addRequirements(subsystem);
   }
 @Override
-public void execute() { 
+public void execute() {
   }
 }

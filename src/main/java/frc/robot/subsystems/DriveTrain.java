@@ -81,11 +81,12 @@ public class DriveTrain extends SubsystemBase {
 
     mecanumDrive =
       new MecanumDrive(sparkMaxLF, sparkMaxLB, sparkMaxRF, sparkMaxRB);
+      sparkMaxLB.setInverted(true);
+      sparkMaxRB.setInverted(true);
     addChild("Mecanum Drive", mecanumDrive);
     mecanumDrive.setSafetyEnabled(true);
     mecanumDrive.setExpiration(0.1);
-    mecanumDrive.setMaxOutput(1.0);
-
+    mecanumDrive.setMaxOutput(1.0); 
     
 
     // resetEncoders(); 
