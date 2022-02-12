@@ -94,7 +94,7 @@ public class Shooter extends SubsystemBase {
     //Shooter.config_kD(ShooterConstants.kPIDLoopIdx, ShooterConstants.kD, ShooterConstants.kTimeoutMs);
   }
 
-  public ShooterStop() {
+  public void ShooterStop() {
     Shooter.set(0);
   }
 
