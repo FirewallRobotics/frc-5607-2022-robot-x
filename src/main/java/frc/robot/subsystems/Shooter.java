@@ -40,9 +40,9 @@ public class Shooter extends SubsystemBase {
     ShooterConstants.Shooter1,
     MotorType.kBrushless
   );
-  private static DigitalOutput ledRing = new DigitalOutput(
+/*  private static DigitalOutput ledRing = new DigitalOutput(
     ShooterConstants.LedRelay
-  );
+  );*/
 
   //private static WPI_TalonSRX Shooter2 = new WPI_TalonSRX(ShooterConstants.SECOND_SHOOTER_ADDRESS);
   //private final AS5600EncoderPwm encoder = new AS5600EncoderPwm(Turret.getSensorCollection());
@@ -68,7 +68,7 @@ public class Shooter extends SubsystemBase {
     //Shooter.setNeutralMode(NeutralMode.Coast);
     // Shooter.setNeutralMode(NeutralMode.Coast);
     //Shooter2.follow(Shooter);
-    ledRing.set(false);
+    //ledRing.set(false);
     /* Config sensor used for Primary PID [Velocity] */
     /*Shooter.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative,
         ShooterConstants.kPIDLoopIdx, 
@@ -98,7 +98,7 @@ public class Shooter extends SubsystemBase {
     // This method will be called once per scheduler run
     //SmartDashboard.putNumber("Turret Encoder", getMeasurement());
     SmartDashboard.putNumber("Shooter Speed", getShooterSpeed());
-    SmartDashboard.putBoolean("ledRing.get", ledRing.get());
+    //SmartDashboard.putBoolean("ledRing.get", ledRing.get());
   }
 
   @Override

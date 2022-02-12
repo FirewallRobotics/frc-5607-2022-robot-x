@@ -22,21 +22,21 @@ public class Constants {
 
   public static final class DriveConstants {
 
-    public static final int kFrontRightDriveTrain = 1;
-    public static final int kBackRightDriveTrain = 2;
-    public static final int kFrontLeftDriveTrain = 4;
-    public static final int kBackLeftDriveTrain = 5;
+    public static final int kFrontRightDriveTrain = 7;
+    public static final int kBackRightDriveTrain = 8;
+    public static final int kFrontLeftDriveTrain = 6;
+    public static final int kBackLeftDriveTrain = 3;
   }
 
   public static final class ClimbingConstants {
 
-    public static final int kRightClimbing = 7;
-    public static final int kLeftClimbing = 6;
+    public static final int kRightClimbing = 4;
+    public static final int kLeftClimbing = 5;
   }
 
   public static final class ShooterConstants {
 
-    public static final int Shooter1 = 8;
+    public static final int Shooter1 = 2;
     public static final int LedRelay = 1;
     public static final int autoShootTimeout = 2;
   }
