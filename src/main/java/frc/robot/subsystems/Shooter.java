@@ -40,7 +40,8 @@ public class Shooter extends SubsystemBase {
     ShooterConstants.Shooter1,
     MotorType.kBrushless
   );
-/*  private static DigitalOutput ledRing = new DigitalOutput(
+
+  /*  private static DigitalOutput ledRing = new DigitalOutput(
     ShooterConstants.LedRelay
   );*/
 
@@ -62,7 +63,7 @@ public class Shooter extends SubsystemBase {
     //Turret.configFactoryDefault();
     Shooter.restoreFactoryDefaults();
     //Shooter2.configFactoryDefault();
-
+    Shooter.set(0.5);
     //Turret.configSelectedFeedbackSensor(FeedbackDevice.PulseWidthEncodedPosition);
     //Shooter.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
     //Shooter.setNeutralMode(NeutralMode.Coast);
@@ -91,6 +92,10 @@ public class Shooter extends SubsystemBase {
     //Shooter.config_kP(ShooterConstants.kPIDLoopIdx, ShooterConstants.kP, ShooterConstants.kTimeoutMs);
     //Shooter.config_kI(ShooterConstants.kPIDLoopIdx, ShooterConstants.kI, ShooterConstants.kTimeoutMs);
     //Shooter.config_kD(ShooterConstants.kPIDLoopIdx, ShooterConstants.kD, ShooterConstants.kTimeoutMs);
+  }
+
+  public void ShooterStop() {
+    Shooter.set(0);
   }
 
   @Override
