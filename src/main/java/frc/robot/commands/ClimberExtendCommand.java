@@ -25,7 +25,11 @@ public class ClimberExtendCommand extends CommandBase {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
-
+@Override
+public void execute() {
+  //Write code for climbing here
+  Climbing.ClimberRetractCommand();
+}
   @Override
   public void end(boolean interrupted) {
     Climbing.ClimberStopCommand();
