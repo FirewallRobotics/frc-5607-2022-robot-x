@@ -99,7 +99,10 @@ public class Intake extends SubsystemBase {
     //else{
     //    intakeMotor.set(0);
   }
-
+  public void intakeStop() {
+    intakeVictor.set(0);
+  
+  }
   {
     //if (intakeSwitch.get() == false);
     //intakeVictor.set(0);
