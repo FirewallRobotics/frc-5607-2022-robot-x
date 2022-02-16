@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.*;
 
 /** An example command that uses an example subsystem. */
-public class ShootingCargoCommand extends CommandBase {
+public class ShootingStopCommand extends CommandBase {
 
   @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
   private final Shooter m_shooter;
@@ -14,7 +14,7 @@ public class ShootingCargoCommand extends CommandBase {
    *
    * @param subsystem The subsystem used by this command.
    */
-  public ShootingCargoCommand(Shooter subsystem) {
+  public ShootingStopCommand(Shooter subsystem) {
     m_shooter = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
@@ -22,6 +22,7 @@ public class ShootingCargoCommand extends CommandBase {
 
   @Override
   public void execute() {
-    m_shooter.ShooterStart();
+    m_shooter.ShooterStop();
   }
 }
+

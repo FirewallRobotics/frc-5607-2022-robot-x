@@ -63,7 +63,6 @@ public class Shooter extends SubsystemBase {
     //Turret.configFactoryDefault();
     Shooter.restoreFactoryDefaults();
     //Shooter2.configFactoryDefault();
-    Shooter.set(0.5);
     //Turret.configSelectedFeedbackSensor(FeedbackDevice.PulseWidthEncodedPosition);
     //Shooter.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
     //Shooter.setNeutralMode(NeutralMode.Coast);
@@ -93,7 +92,9 @@ public class Shooter extends SubsystemBase {
     //Shooter.config_kI(ShooterConstants.kPIDLoopIdx, ShooterConstants.kI, ShooterConstants.kTimeoutMs);
     //Shooter.config_kD(ShooterConstants.kPIDLoopIdx, ShooterConstants.kD, ShooterConstants.kTimeoutMs);
   }
-
+  public void ShooterStart() {
+    Shooter.set(0.2);
+  }
   public void ShooterStop() {
     Shooter.set(0);
   }
