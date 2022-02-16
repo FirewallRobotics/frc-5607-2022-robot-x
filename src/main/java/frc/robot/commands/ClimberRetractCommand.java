@@ -1,11 +1,8 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import java.lang.module.ModuleDescriptor.Requires;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import frc.robot.subsystems.*;
-import edu.wpi.first.wpilibj2.command.CommandBase;
-import edu.wpi.first.wpilibj2.command.Subsystem;
+
 
 public class ClimberRetractCommand extends CommandBase {
     @Override

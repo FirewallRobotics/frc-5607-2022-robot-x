@@ -2,9 +2,7 @@ package frc.robot.commands;
 
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import edu.wpi.first.wpilibj2.command.Subsystem;
 import frc.robot.subsystems.*;
-import java.lang.module.ModuleDescriptor.Requires;
 
 /** An example command that uses an example subsystem. */
 public class ClimberExtendCommand extends CommandBase {
