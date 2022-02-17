@@ -56,7 +56,7 @@ public class Constants {
 
     public static final int firstIntake = 1;
     public static final int secondIntake = 2;
-    public static final int conveyerSpeed = 3;
-    public static final int upperSpeed = 4;
+    public static final double conveyerSpeed = 0.2;
+    public static final double upperSpeed = 0.3;
   }
 }
