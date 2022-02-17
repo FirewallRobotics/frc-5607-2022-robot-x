@@ -51,4 +51,12 @@ public class Constants {
     public static final int FlushTime = 1;
     public static final int autoShootTimeout = 2;
   }
+
+  public static final class IndexerConstants {
+
+    public static final int firstIntake = 1;
+    public static final int secondIntake = 2;
+    public static final int conveyerSpeed = 3;
+    public static final int upperSpeed = 4;
+  }
 }
