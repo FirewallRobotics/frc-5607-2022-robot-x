@@ -33,6 +33,13 @@ public class Constants {
 
     public static final int kRightClimbing = 4;
     public static final int kLeftClimbing = 5;
+    public static final int ClimberLowIn = 0;
+    public static final int ClimberLowOut = 1;
+    public static final int ClimberMidIn = 2;
+    public static final int ClimberMidOut = 3;
+    public static final int ClimberHighIn = 4;
+    public static final int ClimberHighOut = 5;
+
   }
 
   public static final class ShooterConstants {
