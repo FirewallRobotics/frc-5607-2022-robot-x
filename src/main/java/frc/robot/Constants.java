@@ -26,6 +26,7 @@ public class Constants {
     public static final int kBackRightDriveTrain = 8;
     public static final int kFrontLeftDriveTrain = 6;
     public static final int kBackLeftDriveTrain = 3;
+    public static final double DriveTrainSpeedMultiplier = 0.4;
   }
 
   public static final class ClimbingConstants {
