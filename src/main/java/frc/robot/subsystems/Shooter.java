@@ -29,8 +29,8 @@ import frc.robot.Constants.ShooterConstants;
 public class Shooter extends SubsystemBase {
 
   //private static WPI_TalonSRX Turret = new WPI_TalonSRX(ShooterConstants.TURRET_ADDRESS);
-  private static CANSparkMax Shooter = new CANSparkMax(
-    ShooterConstants.Shooter1,
+  public CANSparkMax Shooter = new CANSparkMax(
+    ShooterConstants.ShooterController1,
     MotorType.kBrushless
   );
 
@@ -86,10 +86,10 @@ public class Shooter extends SubsystemBase {
     //Shooter.config_kD(ShooterConstants.kPIDLoopIdx, ShooterConstants.kD, ShooterConstants.kTimeoutMs);
   }
   public void ShooterStart() {
-    Shooter.set(0.2);
+    Shooter.set(ShooterConstants.ShooterStartSpeed);
   }
   public void ShooterStop() {
-    Shooter.set(0);
+    Shooter.set(ShooterConstants.ShooterStopSpeed);
   }
 
   @Override

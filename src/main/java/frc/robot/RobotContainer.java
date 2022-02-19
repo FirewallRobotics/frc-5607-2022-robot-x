@@ -41,7 +41,7 @@ public class RobotContainer {
   // The robot's subsystems
   public final Vision m_vision = new Vision();
   public final Climbing m_climbing = new Climbing();
-  public final static Shooter m_shooter = new Shooter();
+  public final Shooter m_shooter = new Shooter();
   public final static Intake m_intake = new Intake();
   public final DriveTrain m_driveTrain = new DriveTrain();
   public final Lights m_lights = new Lights();
