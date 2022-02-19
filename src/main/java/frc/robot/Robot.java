@@ -97,6 +97,7 @@ public class Robot extends TimedRobot {
     REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_driveTrain.sparkMaxLB, DCMotor.getNEO(1));
     REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_driveTrain.sparkMaxRF, DCMotor.getNEO(1));
     REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_driveTrain.sparkMaxRB, DCMotor.getNEO(1));
+    REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_shooter.Shooter, DCMotor.getNEO(1));
   }
   @Override
   public void simulationPeriodic() {

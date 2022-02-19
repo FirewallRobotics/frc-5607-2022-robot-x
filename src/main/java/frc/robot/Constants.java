@@ -26,6 +26,7 @@ public class Constants {
     public static final int kBackRightDriveTrain = 8;
     public static final int kFrontLeftDriveTrain = 6;
     public static final int kBackLeftDriveTrain = 3;
+    public static final double DriveTrainSpeedMultiplier = 0.4;
   }
 
   public static final class ClimbingConstants {
@@ -36,14 +37,16 @@ public class Constants {
 
   public static final class ShooterConstants {
 
-    public static final int Shooter1 = 2;
+    public static final int ShooterController1 = 10;
     public static final int LedRelay = 1;
     public static final int autoShootTimeout = 2;
+    public static final double ShooterStartSpeed = 0.3;
+    public static final double ShooterStopSpeed = 0;
   }
 
   public static final class IntakeConstants {
 
-    public static final int MoveBot = 2;
+    public static final int MoveBot = 9;
   }
 
   public static final class FlushConstants {

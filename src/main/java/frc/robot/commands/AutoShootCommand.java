@@ -13,8 +13,8 @@ import frc.robot.commands.*;
 public class AutoShootCommand extends SequentialCommandGroup {
 
   public AutoShootCommand() {
-      sequence(new ShootingCargoCommand(RobotContainer.m_shooter));
-      parallel(new FlushIndexerCommand(RobotContainer.m_intake));
+      sequence(new ShootingCargoCommand(RobotContainer.getInstance().m_shooter));
+      parallel(new FlushIndexerCommand(RobotContainer.getInstance().m_intake));
       //addSequential(new NewDriveForwardCommand());
   }
 
