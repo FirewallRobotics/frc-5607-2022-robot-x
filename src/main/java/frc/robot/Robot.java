@@ -125,11 +125,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void teleopPeriodic() {
-    m_robotContainer.m_driveTrain.Drive(
-      -m_robotContainer.getJoystick().getY(),
-      m_robotContainer.getJoystick().getX(),
-      m_robotContainer.getJoystick().getZ()
-    );
   }
 
   @Override
