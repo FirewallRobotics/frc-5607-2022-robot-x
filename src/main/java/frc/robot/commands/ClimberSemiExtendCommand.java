@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.*;
 
 /** An example command that uses an example subsystem. */
-public class ClimberExtendCommand extends CommandBase {
+public class ClimberSemiExtendCommand extends CommandBase {
 
   @Override
   public void initialize() {}
@@ -18,7 +18,7 @@ public class ClimberExtendCommand extends CommandBase {
    *
    * @param subsystem The subsystem used by this command.
    */
-  public ClimberExtendCommand(Climbing subsystem) {
+  public ClimberSemiExtendCommand(Climbing subsystem) {
     m_climbing = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
