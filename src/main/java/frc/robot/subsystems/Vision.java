@@ -31,31 +31,36 @@ public class Vision extends SubsystemBase {
 
   //These are all placeholder values "borrowed" from Willow with slight modification
   //Drive Train:
+  
   public static NetworkTableInstance inst = NetworkTableInstance.getDefault();
   public static NetworkTable table = inst.getTable("cargoball");
-  public static NetworkTableEntry x = table.getEntry("X");
-  public static NetworkTableEntry y = table.getEntry("Y");
-  public static NetworkTableEntry radius = table.getEntry("R");
-  public static NetworkTable goalTable = inst.getTable("goal");
-  public static NetworkTableEntry goalX = goalTable.getEntry("X");
-  public static NetworkTableEntry goalY = goalTable.getEntry("Y");
-  public static NetworkTableEntry goalRadius = goalTable.getEntry("R");
+  public static NetworkTableEntry x_Red = table.getEntry("X_Red");
+  public static NetworkTableEntry y_Red = table.getEntry("Y_Red");
+  public static NetworkTableEntry red_radius = table.getEntry("R_Red");
+  public static NetworkTableEntry x_Blue = table.getEntry("X_Blue");
+  public static NetworkTableEntry y_Blue = table.getEntry("Y_Blue");
+  public static NetworkTableEntry blue_radius = table.getEntry("R_Blue");
+ 
+  public static NetworkTable hub = inst.getTable("hub");
+  public static NetworkTableEntry hubX = hub.getEntry("X_hub");
+  public static NetworkTableEntry hubY = hub.getEntry("Y_hub");
+  public static NetworkTableEntry hub_radius = hub.getEntry("R_hub");
 
-  public static double goalMaxRadius = 98;
-  public static double goalMinRadius = 5;
-  public static double goalMaxOutR = 1;
-  public static double goalMinOutR = -1;
+  public static double hubMaxRadius = 98;
+  public static double hubMinRadius = 5;
+  public static double hubMaxOutR = 1;
+  public static double hubMinOutR = -1;
 
-  public static double goalNeutralOffSetR = 0.23;
-  public static double goalPGainR = 0.250;
-  public static double goalMaxX = 150;
-  public static double goalMinX = 5;
-  public static double goalMaxx = 1;
-  public static double goalMinx = -1;
-  public static double goalNeutralOffSetX = 0;
-  public static double goalPGainX = 0.25;
-  public static double goalScaledX = 0;
-  public static double goalScaledRadius = 0;
+  public static double hubNeutralOffSetR = 0.23;
+  public static double hubPGainR = 0.250;
+  public static double hubMaxX = 150;
+  public static double hubMinX = 5;
+  public static double hubMaxx = 1;
+  public static double hubMinx = -1;
+  public static double hubNeutralOffSetX = 0;
+  public static double hubPGainX = 0.25;
+  public static double hubScaledX = 0;
+  public static double hubScaledRadius = 0;
   public static double MaxRadius = 38;
   public static double MinRadius = 7;
   public static double MaxOutR = 1;
