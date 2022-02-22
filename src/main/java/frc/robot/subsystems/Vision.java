@@ -31,6 +31,7 @@ public class Vision extends SubsystemBase {
 
   //These are all placeholder values "borrowed" from Willow with slight modification
   //Drive Train:
+  
   public static NetworkTableInstance inst = NetworkTableInstance.getDefault();
   public static NetworkTable table = inst.getTable("cargoball");
   public static NetworkTableEntry x = table.getEntry("X");
