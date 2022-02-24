@@ -42,9 +42,10 @@ public class Vision extends SubsystemBase {
   public static NetworkTableEntry blue_radius = table.getEntry("R_Blue");
  
   public static NetworkTable hub = inst.getTable("hub");
-  public static NetworkTableEntry hubX = hub.getEntry("X_hub");
-  public static NetworkTableEntry hubY = hub.getEntry("Y_hub");
-  public static NetworkTableEntry hub_radius = hub.getEntry("R_hub");
+  public static NetworkTableEntry hubXmin = hub.getEntry("x_min");
+  public static NetworkTableEntry hubYmin = hub.getEntry("y_min");
+  public static NetworkTableEntry hubXmax = hub.getEntry("x_max");
+  public static NetworkTableEntry hubYmax = hub.getEntry("y_max");
 
   public static double hubMaxRadius = 98;
   public static double hubMinRadius = 5;
