@@ -115,8 +115,6 @@ public class Intake extends SubsystemBase {
     intakeVictor.set(0);
   }
 
-public static void flush() {
-}
 
   //public boolean finished() {
   //  return getButtonState();

@@ -32,8 +32,8 @@ import com.revrobotics.CANSparkMax;
  *
  */
 public class Indexer extends SubsystemBase {
-    private static WPI_VictorSPX lowerIntake = new WPI_VictorSPX(IndexerConstants.firstIntake);
-    private static WPI_VictorSPX upperIntake = new WPI_VictorSPX(IndexerConstants.secondIntake);
+    private WPI_VictorSPX lowerIntake = new WPI_VictorSPX(IndexerConstants.firstIntake);
+    private WPI_VictorSPX upperIntake = new WPI_VictorSPX(IndexerConstants.secondIntake);
     //private static DigitalInput Button1 = new DigitalInput(RobotMap.INDEXER_SWITCH_1);
     //private static DigitalInput Button2 = new DigitalInput(RobotMap.INDEXER_SWITCH_2);
     //private static DigitalInput Button3 = new DigitalInput(RobotMap.INDEXER_SWITCH_3);
@@ -72,7 +72,7 @@ public class Indexer extends SubsystemBase {
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-    public static void testMotors(double motorSpeed) {
+    public void testMotors(double motorSpeed) {
         lowerIntake.set(motorSpeed);
         upperIntake.set(motorSpeed);
     }
@@ -105,7 +105,7 @@ public class Indexer extends SubsystemBase {
         }
     }
 
-    public static void flush() {
+    public void flush() {
         lowerIntake.set(IndexerConstants.conveyerSpeed);
         upperIntake.set(IndexerConstants.upperSpeed);
     }
@@ -113,7 +113,7 @@ public class Indexer extends SubsystemBase {
     public static void flushRunLowerShooter() {
     }
   
-    public static void stop() {
+    public void stop() {
         lowerIntake.set(0);
         upperIntake.set(0);
     }

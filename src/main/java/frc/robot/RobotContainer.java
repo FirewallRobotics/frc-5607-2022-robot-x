@@ -43,6 +43,7 @@ public class RobotContainer {
   public final Climbing m_climbing = new Climbing();
   public final Shooter m_shooter = new Shooter();
   public final Intake m_intake = new Intake();
+  public final Indexer m_indexer = new Indexer();
   public final DriveTrain m_driveTrain = new DriveTrain();
   public final Lights m_lights = new Lights();
 
@@ -123,7 +124,7 @@ public final JoystickButton joystickButton6 = new JoystickButton(Joystick1, 6);
     joystickButton3.whenReleased(new ClimberStopCommand(m_climbing));
     joystickButton4.whileHeld(new ClimberFullExtendCommand(m_climbing));
     joystickButton4.whenReleased(new ClimberStopCommand(m_climbing));
-    joystickButton5.whenPressed(new FlushIndexerCommand(m_intake));
+    joystickButton5.whenPressed(new FlushIndexerCommand(m_indexer));
     joystickButton6.whileHeld(new ClimberRetractCommand(m_climbing));
     joystickButton6.whenReleased(new ClimberStopCommand(m_climbing));
     

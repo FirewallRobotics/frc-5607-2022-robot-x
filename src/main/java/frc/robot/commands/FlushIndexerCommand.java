@@ -5,13 +5,13 @@ import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants.FlushConstants;
 import frc.robot.Robot;
-import frc.robot.subsystems.Intake;
+import frc.robot.subsystems.Indexer;
 
 public class FlushIndexerCommand extends CommandBase {
-  private final Intake m_intake;
-    public FlushIndexerCommand(Intake subsystem) {
+  private final Indexer m_indexer;
+    public FlushIndexerCommand(Indexer subsystem) {
 
-    m_intake = subsystem;
+    m_indexer = subsystem;
     addRequirements(subsystem); // indexer is needed to intake the ball
   }
 
@@ -22,9 +22,7 @@ public class FlushIndexerCommand extends CommandBase {
   /*
    *execute() - intake power cell
    */
-  public void execute() {
-    Intake.flush();
-  }
+  public void execute() { m_indexer.flush(); }
   /*
    * isFinished
    */
