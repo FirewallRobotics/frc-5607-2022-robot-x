@@ -42,7 +42,7 @@ public class RobotContainer {
   public final Vision m_vision = new Vision();
   public final Climbing m_climbing = new Climbing();
   public final Shooter m_shooter = new Shooter();
-  public final static Intake m_intake = new Intake();
+  public final Intake m_intake = new Intake();
   public final DriveTrain m_driveTrain = new DriveTrain();
   public final Lights m_lights = new Lights();
 
@@ -117,13 +117,13 @@ public final JoystickButton joystickButton6 = new JoystickButton(Joystick1, 6);
     // Create some buttons
     joystickButton1.whileHeld(new ShootingCargoCommand(m_shooter));
     joystickButton1.whenReleased(new ShootingStopCommand(m_shooter));
-    //joystickButton2.whileHeld(new IntakeCargoCommand(m_intake));
-    //joystickButton2.whenReleased(new IntakeStopCommand(m_intake));
+    joystickButton2.whileHeld(new IntakeCargoCommand(m_intake));
+    joystickButton2.whenReleased(new IntakeStopCommand(m_intake));
     joystickButton3.whileHeld(new ClimberSemiExtendCommand(m_climbing));
     joystickButton3.whenReleased(new ClimberStopCommand(m_climbing));
     joystickButton4.whileHeld(new ClimberFullExtendCommand(m_climbing));
     joystickButton4.whenReleased(new ClimberStopCommand(m_climbing));
-    //joystickButton5.whenPressed(new FlushIndexerCommand(m_intake));
+    joystickButton5.whenPressed(new FlushIndexerCommand(m_intake));
     joystickButton6.whileHeld(new ClimberRetractCommand(m_climbing));
     joystickButton6.whenReleased(new ClimberStopCommand(m_climbing));
     
