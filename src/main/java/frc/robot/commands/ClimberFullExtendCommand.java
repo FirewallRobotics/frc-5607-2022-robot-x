@@ -24,11 +24,17 @@ public class ClimberFullExtendCommand extends CommandBase {
     addRequirements(subsystem);
   }
 @Override
-public void execute() {
+  public void execute() {
   //Write code for climbing here
-  Climbing.ClimberExtendCommand();
+  Climbing.ClimberFullExtendCommand();
 }
-  @Override
+
+@Override
+  public boolean isFinished() {
+    return false;
+}  
+  
+@Override
   public void end(boolean interrupted) {
     Climbing.ClimberStopCommand();
   }
