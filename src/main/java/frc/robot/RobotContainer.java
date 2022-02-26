@@ -22,6 +22,7 @@ import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import frc.robot.Constants.FlushConstants;
 import frc.robot.commands.*;
 import frc.robot.subsystems.*;
 
@@ -124,7 +125,7 @@ public final JoystickButton joystickButton6 = new JoystickButton(Joystick1, 6);
     joystickButton3.whenReleased(new ClimberStopCommand(m_climbing));
     joystickButton4.whileHeld(new ClimberFullExtendCommand(m_climbing));
     joystickButton4.whenReleased(new ClimberStopCommand(m_climbing));
-    joystickButton5.whenPressed(new FlushIndexerCommand(m_indexer));
+    joystickButton5.whenPressed(new FlushIndexerCommand(m_indexer).withTimeout(FlushConstants.FlushTime));
     joystickButton6.whileHeld(new ClimberRetractCommand(m_climbing));
     joystickButton6.whenReleased(new ClimberStopCommand(m_climbing));
     

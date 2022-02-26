@@ -16,12 +16,12 @@ public class FlushIndexerCommand extends CommandBase {
   }
 
   public void initialize() {
-    withTimeout(FlushConstants.FlushTime);
   }
 
   /*
    *execute() - intake power cell
    */
+@Override
   public void execute() { m_indexer.flush(); }
   /*
    * isFinished
@@ -29,10 +29,8 @@ public class FlushIndexerCommand extends CommandBase {
   //public boolean isFinished() {
   //    return isTimedOut();
   //return false;
-
-    protected void end() {
-      Intake.stop();
-  }
-    protected void interrupted() {
+@Override
+    public void end(boolean interrupted) {
+      m_indexer.stop();
   }
 }
