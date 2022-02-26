@@ -25,7 +25,7 @@ public class ClimberStopCommand extends CommandBase {
 @Override
 public void execute() {
   //Write code for climbing here
-  Climbing.ClimberStopCommand();
+  m_climbing.ClimberStopCommand();
 }
 @Override
 public boolean isFinished() {
@@ -35,7 +35,7 @@ public boolean isFinished() {
 @Override
 public
  void end(boolean interrupted) {
-  Climbing.ClimberStopCommand();
+  m_climbing.ClimberStopCommand();
   }
     
 }

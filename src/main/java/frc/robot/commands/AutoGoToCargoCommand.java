@@ -1,12 +1,9 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
-import frc.robot.Robot;
-import frc.robot.RobotContainer;
 import frc.robot.subsystems.*;
 import java.lang.Math;
-import java.security.PrivateKey;
+
 
 public class AutoGoToCargoCommand extends CommandBase {
 
