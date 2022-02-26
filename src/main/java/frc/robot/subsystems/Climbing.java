@@ -91,13 +91,31 @@ static DigitalOutput highOutput = new DigitalOutput(ClimbingConstants.ClimberHig
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     //Placeholder values used
-    public static void ClimberExtendCommand() {
+  public static void ClimberFullExtendCommand() {
+    if (highInput.get() == true) {
+      talonSRXLC.set(.2);
+      talonSRXRC.set(-.2);
+      System.out.println("Extending Fully...");
+    }
+    else {
+      talonSRXLC.set(0);
+      talonSRXRC.set(0);
+    }
+  }
+
+    public static void ClimberSemiExtendCommand() {
+      if (middleInput.get() == true) {
         talonSRXLC.set(.2);
         talonSRXRC.set(-.2);
-        System.out.println("Extending...");
-        
+        System.out.println("Extending Somewhat...");
     }
-    public static void ClimberRetractCommand() {
+    else {
+      talonSRXLC.set(0);
+      talonSRXRC.set(0);
+    }
+  }
+  
+  public static void ClimberRetractCommand() {
       if (lowInput.get() == false) {  
         talonSRXLC.set(-.2);
         talonSRXRC.set(.2);
