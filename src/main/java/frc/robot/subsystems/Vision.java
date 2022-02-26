@@ -34,13 +34,12 @@ public class Vision extends SubsystemBase {
   
   public static NetworkTableInstance inst = NetworkTableInstance.getDefault();
   public static NetworkTable table = inst.getTable("cargoball");
-  public static NetworkTableEntry x_Red = table.getEntry("x_Red");
-  public static NetworkTableEntry y_Red = table.getEntry("y_Red");
-  public static NetworkTableEntry red_radius = table.getEntry("r_Red");
-  public static NetworkTableEntry x_Blue = table.getEntry("x_Blue");
-  public static NetworkTableEntry y_Blue = table.getEntry("y_Blue");
-  public static NetworkTableEntry blue_radius = table.getEntry("r_Blue");
-  
+  public static NetworkTableEntry x_Red = table.getEntry("X_Red");
+  public static NetworkTableEntry y_Red = table.getEntry("Y_Red");
+  public static NetworkTableEntry red_radius = table.getEntry("R_Red");
+  public static NetworkTableEntry x_Blue = table.getEntry("X_Blue");
+  public static NetworkTableEntry y_Blue = table.getEntry("Y_Blue");
+  public static NetworkTableEntry blue_radius = table.getEntry("R_Blue");
  
   public static NetworkTable hub = inst.getTable("hub");
   public static NetworkTableEntry hubXmin = hub.getEntry("x_min");
@@ -72,7 +71,6 @@ public class Vision extends SubsystemBase {
   public static double MinX = 5;
   public static double Maxx = 1;
   public static double Minx = -1;
-  public static double MinOutR = -1;
 
   //Comments from last year |
   //                        V
