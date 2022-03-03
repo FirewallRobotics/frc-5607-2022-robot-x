@@ -24,16 +24,16 @@ public class AutoGoToCargoCommand extends CommandBase {
 
   @Override
   public void execute() {
-    double x_Blue = Math.round(m_vision.x_Blue.getDouble(-1));
-    double blue_radius = Math.round(m_vision.blue_radius.getDouble(-1));
+    double x_Blue = Math.round(m_vision.x_Blue.getDouble(0));
+    double blue_radius = Math.round(m_vision.blue_radius.getDouble(0));
     int center = 160;
     //double x_Red = Math.round(m_vision.x_Red.getDouble(-1));
     //double red_radius = Math.round(m_vision.red_radius.getDouble(-1));
 
-    if (x_Blue == -1) {
-      //ScaledX = -1;
-      //red_radius = -1;
-      blue_radius = -1;
+    if (x_Blue == 0) {
+      //ScaledX = 0;
+      //red_radius = 0;
+      blue_radius = 0;
     } else {
       //ScaledX = PGainX * ((((Maxx - Minx) * ((X - MinX) / (MaxX - MinX))) + Minx) - NeutralOffSetX);
       m_vision.ScaledRadius =
