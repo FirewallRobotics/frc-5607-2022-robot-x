@@ -22,6 +22,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
 import com.revrobotics.REVPhysicsSim;
+
+import frc.robot.Constants.IntakeConstants;
 import edu.wpi.first.math.system.plant.DCMotor;
 
 
@@ -39,8 +41,8 @@ public class Robot extends TimedRobot {
   public static Object oi;
   private Command m_autonomousCommand;
   private RobotContainer m_robotContainer;
-  public static final DoubleSolenoid firstSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
-  public static final DoubleSolenoid secondSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 2,3);
+  public static final DoubleSolenoid firstSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, IntakeConstants.SolenoidForwardChannel1, IntakeConstants.SolenoidReverseChannel1);
+  public static final DoubleSolenoid secondSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, IntakeConstants.SolenoidForwardChannel2,IntakeConstants.SolenoidReverseChannel2);
 
   /**
    * This function is run when the robot is first started up and should be

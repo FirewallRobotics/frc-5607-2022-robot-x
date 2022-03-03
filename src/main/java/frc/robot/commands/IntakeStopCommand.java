@@ -19,7 +19,11 @@ public class IntakeStopCommand extends CommandBase {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
-
+  
   @Override
-  public void execute() { m_intake.intakeStop(); }
+  public void execute() { 
+    m_intake.intakeStop(); 
+    m_intake.retractSolenoid();
+  
+  }
 }
