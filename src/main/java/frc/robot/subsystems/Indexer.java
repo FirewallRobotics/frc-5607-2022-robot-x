@@ -75,21 +75,7 @@ public class Indexer extends SubsystemBase {
     //We will then read when the sensor is hit and stop the conveyor every time and repeat 
     //until we go to shoot the balls. Intake proccess after intake will be automatic.
     public void index() {
-        /*if (numberCellsInIndexer == 0 && Button1.get() == false){
-            isFinished = true;
-            numberCellsInIndexer = 1;
-        }
-        else if (numberCellsInIndexer == 1 && Button2.get() == false){
-            isFinished = true;
-            numberCellsInIndexer = 2;
-        }
-        else if (numberCellsInIndexer == 2 && Button3.get() == false){
-            isFinished = true;
-            numberCellsInIndexer = 3;
-        }
-        else {
-            isFinished = false; 
-        } */
+       
         if (isFinished == true) {
             // lowerIntake.set(0);
             upperIntake.set(0);

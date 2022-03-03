@@ -7,7 +7,7 @@ public class AutoShootCommand extends SequentialCommandGroup {
 
   public AutoShootCommand() {
       sequence(new ShootingCargoCommand(RobotContainer.getInstance().m_shooter));
-      parallel(new FlushIndexerCommand(RobotContainer.getInstance().m_intake));
+      parallel(new FlushIndexerCommand(RobotContainer.getInstance().m_indexer));
       //addSequential(new NewDriveForwardCommand());
   }
 
