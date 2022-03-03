@@ -15,6 +15,8 @@ package frc.robot;
 import edu.wpi.first.hal.FRCNetComm.tInstances;
 import edu.wpi.first.hal.FRCNetComm.tResourceType;
 import edu.wpi.first.hal.HAL;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
@@ -37,6 +39,8 @@ public class Robot extends TimedRobot {
   public static Object oi;
   private Command m_autonomousCommand;
   private RobotContainer m_robotContainer;
+  public static final DoubleSolenoid firstSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
+  public static final DoubleSolenoid secondSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 2,3);
 
   /**
    * This function is run when the robot is first started up and should be

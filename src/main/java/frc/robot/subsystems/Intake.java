@@ -15,10 +15,11 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 //import edu.wpi.first.wpilibj.DigitalInput;
 //import edu.wpi.first.wpilibj.DigitalInput;
-//import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 //import edu.wpi.first.wpilibj.PIDOutput;
 //import edu.wpi.first.wpilibj.PIDSource;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Robot;
 import frc.robot.Constants.IntakeConstants;
 //import frc.robot.Robot;
 //import frc.robot.commands.*;
@@ -36,6 +37,8 @@ public class Intake extends SubsystemBase {
   private static WPI_VictorSPX intakeVictor = new WPI_VictorSPX(
     IntakeConstants.MoveBot
   );
+  private static DoubleSolenoid firstSolenoid = Robot.firstSolenoid;
+  private static DoubleSolenoid secondSolenoid = Robot.secondSolenoid;
   //public static DigitalInput intakeSwitch = new DigitalInput(
   //  IntakeConstants.INTAKER_SWITCH
   //);
@@ -101,6 +104,14 @@ public class Intake extends SubsystemBase {
     intakeVictor.set(0);
   
   }
+  public static void extendSolenoid() {
+    firstSolenoid.set(DoubleSolenoid.Value.kReverse);
+    secondSolenoid.set(DoubleSolenoid.Value.kReverse);
+}
+  public static void retractSolenoid() {
+    firstSolenoid.set(DoubleSolenoid.Value.kForward);
+    secondSolenoid.set(DoubleSolenoid.Value.kForward);
+}
   {
     //if (intakeSwitch.get() == false);
     //intakeVictor.set(0);
