@@ -6,7 +6,7 @@ import frc.robot.subsystems.*;
 /** An example command that uses an example subsystem. */
 public class IntakeCargoCommand extends CommandBase {
 
-  @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
+  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final Intake m_intake;
 
   /**
@@ -21,5 +21,8 @@ public class IntakeCargoCommand extends CommandBase {
   }
 
   @Override
-  public void execute() { m_intake.intakePowerCell(); }
+  public void execute() {
+    m_intake.intakePowerCell();
+    m_intake.extendSolenoid();
+  }
 }
