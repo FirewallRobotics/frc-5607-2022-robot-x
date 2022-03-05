@@ -6,7 +6,7 @@ import frc.robot.subsystems.*;
 /** An example command that uses an example subsystem. */
 public class IntakeStopCommand extends CommandBase {
 
-  @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
+  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final Intake m_intake;
 
   /**
@@ -19,11 +19,10 @@ public class IntakeStopCommand extends CommandBase {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
-  
+
   @Override
-  public void execute() { 
-    m_intake.intakeStop(); 
+  public void execute() {
+    m_intake.intakeStop();
     m_intake.retractSolenoid();
-  
   }
 }

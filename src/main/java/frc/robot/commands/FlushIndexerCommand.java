@@ -6,7 +6,8 @@ import frc.robot.subsystems.Intake;
 
 public class FlushIndexerCommand extends CommandBase {
   private final Intake m_intake;
-    public FlushIndexerCommand(Intake subsystem) {
+
+  public FlushIndexerCommand(Intake subsystem) {
 
     m_intake = subsystem;
     addRequirements(subsystem); // indexer is needed to intake the ball
@@ -25,13 +26,13 @@ public class FlushIndexerCommand extends CommandBase {
   /*
    * isFinished
    */
-  //public boolean isFinished() {
+  // public boolean isFinished() {
   //    return isTimedOut();
-  //return false;
+  // return false;
 
-    protected void end() {
-      Intake.stop();
+  protected void end() {
+    Intake.stop();
   }
-    protected void interrupted() {
-  }
+
+  protected void interrupted() {}
 }

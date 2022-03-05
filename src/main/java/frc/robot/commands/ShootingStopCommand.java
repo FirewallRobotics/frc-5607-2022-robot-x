@@ -6,7 +6,7 @@ import frc.robot.subsystems.*;
 /** An example command that uses an example subsystem. */
 public class ShootingStopCommand extends CommandBase {
 
-  @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
+  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final Shooter m_shooter;
 
   /**
@@ -25,4 +25,3 @@ public class ShootingStopCommand extends CommandBase {
     m_shooter.ShooterStop();
   }
 }
-

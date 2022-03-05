@@ -12,59 +12,60 @@
 
 package frc.robot;
 
+import com.revrobotics.REVPhysicsSim;
 import edu.wpi.first.hal.FRCNetComm.tInstances;
 import edu.wpi.first.hal.FRCNetComm.tResourceType;
 import edu.wpi.first.hal.HAL;
+import edu.wpi.first.math.system.plant.DCMotor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-
-import com.revrobotics.REVPhysicsSim;
-
 import frc.robot.Constants.IntakeConstants;
-import edu.wpi.first.math.system.plant.DCMotor;
 
-
-//import frc.robot.commands.RaiseCommand;
+// import frc.robot.commands.RaiseCommand;
 
 /**
- * The VM is configured to automatically run this class, and to call the
- * functions corresponding to each mode, as described in the TimedRobot
- * documentation. If you change the name of this class or the package after
- * creating this project, you must also update the build.properties file in
- * the project.
+ * The VM is configured to automatically run this class, and to call the functions corresponding to
+ * each mode, as described in the TimedRobot documentation. If you change the name of this class or
+ * the package after creating this project, you must also update the build.properties file in the
+ * project.
  */
 public class Robot extends TimedRobot {
 
   public static Object oi;
   private Command m_autonomousCommand;
   private RobotContainer m_robotContainer;
-  public static final DoubleSolenoid firstSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, IntakeConstants.SolenoidForwardChannel1, IntakeConstants.SolenoidReverseChannel1);
-  public static final DoubleSolenoid secondSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, IntakeConstants.SolenoidForwardChannel2,IntakeConstants.SolenoidReverseChannel2);
+  public static final DoubleSolenoid firstSolenoid =
+      new DoubleSolenoid(
+          PneumaticsModuleType.CTREPCM,
+          IntakeConstants.SolenoidForwardChannel1,
+          IntakeConstants.SolenoidReverseChannel1);
+  public static final DoubleSolenoid secondSolenoid =
+      new DoubleSolenoid(
+          PneumaticsModuleType.CTREPCM,
+          IntakeConstants.SolenoidForwardChannel2,
+          IntakeConstants.SolenoidReverseChannel2);
 
   /**
-   * This function is run when the robot is first started up and should be
-   * used for any initialization code.
+   * This function is run when the robot is first started up and should be used for any
+   * initialization code.
    */
   @Override
   public void robotInit() {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = RobotContainer.getInstance();
-    HAL.report(
-      tResourceType.kResourceType_Framework,
-      tInstances.kFramework_RobotBuilder
-    );
+    HAL.report(tResourceType.kResourceType_Framework, tInstances.kFramework_RobotBuilder);
   }
 
   /**
    * This function is called every robot packet, no matter the mode. Use this for items like
    * diagnostics that you want ran during disabled, autonomous, teleoperated and test.
    *
-   * <p>This runs after the mode specific periodic functions, but before
-   * LiveWindow and SmartDashboard integrated updating.
+   * <p>This runs after the mode specific periodic functions, but before LiveWindow and
+   * SmartDashboard integrated updating.
    */
   @Override
   public void robotPeriodic() {
@@ -75,18 +76,14 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
   }
 
-  /**
-   * This function is called once each time the robot enters Disabled mode.
-   */
+  /** This function is called once each time the robot enters Disabled mode. */
   @Override
   public void disabledInit() {}
 
   @Override
   public void disabledPeriodic() {}
 
-  /**
-   * This autonomous runs the autonomous command selected by your {@link RobotContainer} class.
-   */
+  /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
   @Override
   public void autonomousInit() {
     m_autonomousCommand = m_robotContainer.getAutonomousCommand();
@@ -99,19 +96,22 @@ public class Robot extends TimedRobot {
 
   @Override
   public void simulationInit() {
-    REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_driveTrain.sparkMaxLF, DCMotor.getNEO(1));
-    REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_driveTrain.sparkMaxLB, DCMotor.getNEO(1));
-    REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_driveTrain.sparkMaxRF, DCMotor.getNEO(1));
-    REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_driveTrain.sparkMaxRB, DCMotor.getNEO(1));
+    REVPhysicsSim.getInstance()
+        .addSparkMax(m_robotContainer.m_driveTrain.sparkMaxLF, DCMotor.getNEO(1));
+    REVPhysicsSim.getInstance()
+        .addSparkMax(m_robotContainer.m_driveTrain.sparkMaxLB, DCMotor.getNEO(1));
+    REVPhysicsSim.getInstance()
+        .addSparkMax(m_robotContainer.m_driveTrain.sparkMaxRF, DCMotor.getNEO(1));
+    REVPhysicsSim.getInstance()
+        .addSparkMax(m_robotContainer.m_driveTrain.sparkMaxRB, DCMotor.getNEO(1));
     REVPhysicsSim.getInstance().addSparkMax(m_robotContainer.m_shooter.Shooter, DCMotor.getNEO(1));
   }
+
   @Override
   public void simulationPeriodic() {
     REVPhysicsSim.getInstance().run();
   }
-  /**
-   * This function is called periodically during autonomous.
-   */
+  /** This function is called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {}
 
@@ -126,12 +126,9 @@ public class Robot extends TimedRobot {
     }
   }
 
-  /**
-   * This function is called periodically during operator control.
-   */
+  /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {
-  }
+  public void teleopPeriodic() {}
 
   @Override
   public void testInit() {
@@ -139,9 +136,7 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().cancelAll();
   }
 
-  /**
-   * This function is called periodically during test mode.
-   */
+  /** This function is called periodically during test mode. */
   @Override
   public void testPeriodic() {}
 }
