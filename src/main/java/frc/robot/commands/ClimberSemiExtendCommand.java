@@ -9,7 +9,7 @@ public class ClimberSemiExtendCommand extends CommandBase {
   @Override
   public void initialize() {}
 
-  @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
+  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final Climbing m_climbing;
 
   /**
@@ -22,23 +22,24 @@ public class ClimberSemiExtendCommand extends CommandBase {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
-@Override
-public void execute() {
-  //Write code for climbing here
-  Climbing.ClimberSemiExtendCommand();
-}
-  
-@Override
-public boolean isFinished() {
-  return false;
-}
+
+  @Override
+  public void execute() {
+    // Write code for climbing here
+    Climbing.ClimberSemiExtendCommand();
+  }
+
+  @Override
+  public boolean isFinished() {
+    return false;
+  }
 
   @Override
   public void end(boolean interrupted) {
     Climbing.ClimberStopCommand();
   }
-  //@Override
-  //protected void interrupted() {
+  // @Override
+  // protected void interrupted() {
 
 }
-//}
+// }

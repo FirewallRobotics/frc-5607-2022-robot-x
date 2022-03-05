@@ -12,6 +12,7 @@ language:
 
 script:
   - export JAVA_HOME=/tmp/frc2022-artifacts/jdk
+  - ./gradlew spotlessCheck
   - ./gradlew build
 
 # Generate javadocs and move to the docs folder for GitHub Pages support  
