@@ -26,7 +26,7 @@ public class ShootingCargoCommand extends CommandBase {
   }
 
   @Override
-    public void end(boolean interrupted) {
-     m_shooter.ShooterStop();
+  public void end(boolean interrupted) {
+    m_shooter.ShooterStop();
   }
 }
