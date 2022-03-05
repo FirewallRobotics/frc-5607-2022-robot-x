@@ -19,6 +19,7 @@ public class FlushIndexerCommand extends CommandBase {
   /*
    *execute() - intake power cell
    */
+  @Override
   public void execute() {
     Indexer.flush();
   }
@@ -29,9 +30,8 @@ public class FlushIndexerCommand extends CommandBase {
   //    return isTimedOut();
   //return false;
 
-    protected void end() {
+  @Override
+    public void end(boolean interrupted) {
       Indexer.stop();
-  }
-    protected void interrupted() {
   }
 }
