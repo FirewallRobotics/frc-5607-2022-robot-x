@@ -6,7 +6,7 @@ import frc.robot.subsystems.*;
 /** An example command that uses an example subsystem. */
 public class DrivingCommand extends CommandBase {
 
-  @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
+  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final DriveTrain m_drive;
 
   /**
@@ -19,7 +19,7 @@ public class DrivingCommand extends CommandBase {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
-@Override
-public void execute() {
-  }
+
+  @Override
+  public void execute() {}
 }

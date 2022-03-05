@@ -6,7 +6,7 @@ import frc.robot.subsystems.*;
 /** An example command that uses an example subsystem. */
 public class ShootingCargoCommand extends CommandBase {
 
-  @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
+  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final Shooter m_shooter;
 
   /**
