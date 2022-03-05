@@ -7,7 +7,6 @@ import frc.robot.subsystems.*;
 public class DrivingCommand extends CommandBase {
 
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-  private final DriveTrain m_drive;
 
   /**
    * Creates a new DrivingCommand.
@@ -15,7 +14,6 @@ public class DrivingCommand extends CommandBase {
    * @param subsystem The subsystem used by this command.
    */
   public DrivingCommand(DriveTrain subsystem) {
-    m_drive = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }

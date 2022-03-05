@@ -24,4 +24,9 @@ public class ShootingCargoCommand extends CommandBase {
   public void execute() {
     m_shooter.ShooterStart();
   }
+
+  @Override
+  public void end(boolean interrupted) {
+    m_shooter.ShooterStop();
+  }
 }

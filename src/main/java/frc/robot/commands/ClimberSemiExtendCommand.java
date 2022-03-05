@@ -26,7 +26,7 @@ public class ClimberSemiExtendCommand extends CommandBase {
   @Override
   public void execute() {
     // Write code for climbing here
-    Climbing.ClimberSemiExtendCommand();
+    m_climbing.ClimberSemiExtendCommand();
   }
 
   @Override
@@ -36,7 +36,7 @@ public class ClimberSemiExtendCommand extends CommandBase {
 
   @Override
   public void end(boolean interrupted) {
-    Climbing.ClimberStopCommand();
+    m_climbing.ClimberStopCommand();
   }
   // @Override
   // protected void interrupted() {
