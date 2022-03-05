@@ -21,7 +21,7 @@ public class FlushIndexerCommand extends CommandBase {
    */
   @Override
   public void execute() {
-    Indexer.flush();
+    m_indexer.flush();
   }
   /*
    * isFinished
@@ -32,8 +32,6 @@ public class FlushIndexerCommand extends CommandBase {
 
   @Override
   public void end(boolean interrupted) {
-    Indexer.stop();
+    m_indexer.stop();
   }
-
-  protected void interrupted() {}
 }

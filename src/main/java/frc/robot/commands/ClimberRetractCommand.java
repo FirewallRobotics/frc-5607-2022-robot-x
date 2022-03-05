@@ -24,7 +24,7 @@ public class ClimberRetractCommand extends CommandBase {
   @Override
   public void execute() {
     // Write code for climbing here
-    Climbing.ClimberRetractCommand();
+    m_climbing.ClimberRetractCommand();
   }
 
   @Override
@@ -34,6 +34,6 @@ public class ClimberRetractCommand extends CommandBase {
 
   @Override
   public void end(boolean interrupted) {
-    Climbing.ClimberStopCommand();
+    m_climbing.ClimberStopCommand();
   }
 }
