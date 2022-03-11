@@ -38,7 +38,8 @@ public class DriveTrain extends SubsystemBase {
   public CANSparkMax sparkMaxLB;
   public CANSparkMax sparkMaxRF;
   public CANSparkMax sparkMaxRB;
-  public  SlewRateLimiter filter = new SlewRateLimiter(0.5);
+  public  SlewRateLimiter xfilter = new SlewRateLimiter(0.5);
+  public SlewRateLimiter yfilter = new SlewRateLimiter(0.5);
   private static MecanumDrive mecanumDrive;
   private static Gyro m_gyro = new ADXRS450_Gyro();
   // private final MecanumDriveOdometry m_Odometry;
@@ -126,8 +127,8 @@ public class DriveTrain extends SubsystemBase {
       turn = zRotation;
     }
     mecanumDrive.driveCartesian(
-        filter.calculate(y),
-        filter.calculate(x),
+        yfilter.calculate(y),
+        xfilter.calculate(x),
         turn);  
   }
 
