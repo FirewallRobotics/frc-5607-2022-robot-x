@@ -14,6 +14,7 @@ package frc.robot.subsystems;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import edu.wpi.first.math.filter.SlewRateLimiter;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import edu.wpi.first.wpilibj.interfaces.Gyro;
@@ -36,6 +37,8 @@ public class DriveTrain extends SubsystemBase {
   public CANSparkMax sparkMaxLB;
   public CANSparkMax sparkMaxRF;
   public CANSparkMax sparkMaxRB;
+  public SlewRateLimiter xfilter = new SlewRateLimiter(0.5);
+  public SlewRateLimiter yfilter = new SlewRateLimiter(0.5);
   private static MecanumDrive mecanumDrive;
   private static Gyro m_gyro = new ADXRS450_Gyro();
   // private final MecanumDriveOdometry m_Odometry;
@@ -122,10 +125,7 @@ public class DriveTrain extends SubsystemBase {
     if (zRotation > deadzone || zRotation < -deadzone) {
       turn = zRotation;
     }
-    mecanumDrive.driveCartesian(
-        DriveConstants.DriveTrainSpeedMultiplier * y,
-        DriveConstants.DriveTrainSpeedMultiplier * x,
-        DriveConstants.DriveTrainSpeedMultiplier * turn);
+    mecanumDrive.driveCartesian(yfilter.calculate(y), xfilter.calculate(x), turn);
   }
 
   // public static void driveToPowerCell() {
