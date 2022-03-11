@@ -30,6 +30,7 @@ public class Vision extends SubsystemBase {
 
   public NetworkTableInstance inst = NetworkTableInstance.getDefault();
   public NetworkTable table = inst.getTable("cargoball");
+  public NetworkTableEntry red_alliance = inst.getTable("FMSInfo").getEntry("IsRedAlliance");
   public NetworkTableEntry x_Red = table.getEntry("x_Red");
   public NetworkTableEntry y_Red = table.getEntry("y_Red");
   public NetworkTableEntry red_radius = table.getEntry("r_Red");
