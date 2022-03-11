@@ -1,39 +1,49 @@
 {
   "MainWindow": {
     "GLOBAL": {
-      "height": "720",
-      "maximized": "0",
+      "height": "705",
+      "maximized": "1",
       "style": "0",
       "userScale": "2",
-      "width": "1280",
-      "xpos": "-1",
-      "ypos": "-1"
+      "width": "1366",
+      "xpos": "0",
+      "ypos": "23"
     }
   },
   "Window": {
+    "###/LiveWindow/DriveTrain/Mecanum Drive": {
+      "Collapsed": "0",
+      "Pos": "60,60",
+      "Size": "300,350"
+    },
     "###FMS": {
       "Collapsed": "0",
       "Pos": "5,540",
-      "Size": "235,169"
+      "Size": "283,146"
     },
     "###Joysticks": {
       "Collapsed": "0",
-      "Pos": "250,465",
-      "Size": "796,172"
+      "Pos": "241,371",
+      "Size": "796,155"
     },
     "###NetworkTables": {
       "Collapsed": "0",
-      "Pos": "250,277",
+      "Pos": "221,116",
       "Size": "750,185"
     },
     "###Other Devices": {
       "Collapsed": "0",
-      "Pos": "1025,20",
+      "Pos": "1025,22",
       "Size": "250,695"
     },
-    "###System Joysticks": {
+    "###Solenoids": {
       "Collapsed": "0",
-      "Pos": "5,350",
+      "Pos": "290,20",
+      "Size": "169,54"
+    },
+    "###System Joysticks": {
+      "Collapsed": "1",
+      "Pos": "4,326",
       "Size": "192,218"
     },
     "###Timing": {
