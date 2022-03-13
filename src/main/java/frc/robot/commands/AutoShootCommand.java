@@ -1,6 +1,5 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.*;
 
@@ -24,10 +23,10 @@ public class AutoShootCommand extends CommandBase {
   @Override
   public void execute() {
     long hubXMin = Math.round(m_vision.hubXmin.getDouble(0));
-    //long hubYMin = Math.round(m_vision.hubYmin.getDouble(0));
+    // long hubYMin = Math.round(m_vision.hubYmin.getDouble(0));
     long hubXMax = Math.round(m_vision.hubXmax.getDouble(0));
-    ///long hubYMax = Math.round(m_vision.hubYmax.getDouble(0));
-    //long xDif = (hubXMax - hubXMin);
+    /// long hubYMax = Math.round(m_vision.hubYmax.getDouble(0));
+    // long xDif = (hubXMax - hubXMin);
     long centerOfFrame = 160;
     long centerOfHub = Math.round((hubXMax + hubXMin) / 2);
     long centerDif = Math.abs(centerOfFrame - centerOfHub);
