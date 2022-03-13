@@ -112,6 +112,7 @@ public class DriveTrain extends SubsystemBase {
     double y = 0; // variable for forward/backward movement
     double x = 0; // variable for side to side movement
     double turn = 0; // variable for turning movement
+    double m_gyro = 0;
     double deadzone = 0.2;
 
     if (ySpeed > deadzone || ySpeed < -deadzone) {
@@ -125,6 +126,11 @@ public class DriveTrain extends SubsystemBase {
     if (zRotation > deadzone || zRotation < -deadzone) {
       turn = zRotation;
     }
+    mecanumDrive.driveCartesian(
+        DriveConstants.DriveTrainSpeedMultiplier * y,
+        DriveConstants.DriveTrainSpeedMultiplier * x,
+        DriveConstants.DriveTrainSpeedMultiplier * turn,
+        DriveConstants.DriveTrainSpeedMultiplier * m_gyro);
     mecanumDrive.driveCartesian(yfilter.calculate(y), xfilter.calculate(x), turn);
   }
 
