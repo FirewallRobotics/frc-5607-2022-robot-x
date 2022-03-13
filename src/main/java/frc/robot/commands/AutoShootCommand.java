@@ -37,10 +37,10 @@ public class AutoShootCommand extends CommandBase {
       isFinished = true;
     } else if (centerOfHub < centerOfFrame) {
       // Move bot left
-      m_drivetrain.Drive(0, 0, -0.2);
+      m_drivetrain.Drive(0, 0, -0.3);
     } else if (centerOfHub > centerOfFrame) {
       // Move bot right
-      m_drivetrain.Drive(0, 0, 0.2);
+      m_drivetrain.Drive(0, 0, 0.3);
     }
 
     /*if (hubXMin == 0) {
