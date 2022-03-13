@@ -127,11 +127,10 @@ public class DriveTrain extends SubsystemBase {
       turn = zRotation;
     }
     mecanumDrive.driveCartesian(
-        DriveConstants.DriveTrainSpeedMultiplier * y,
-        DriveConstants.DriveTrainSpeedMultiplier * x,
+        DriveConstants.DriveTrainSpeedMultiplier * yfilter.calculate(y),
+        DriveConstants.DriveTrainSpeedMultiplier * xfilter.calculate(x),
         DriveConstants.DriveTrainSpeedMultiplier * turn,
         DriveConstants.DriveTrainSpeedMultiplier * m_gyro);
-    mecanumDrive.driveCartesian(yfilter.calculate(y), xfilter.calculate(x), turn);
   }
 
   // public static void driveToPowerCell() {
