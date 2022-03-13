@@ -39,6 +39,7 @@ public class Constants {
     public static final int ClimberMidOut = 3;
     public static final int ClimberHighIn = 4;
     public static final int ClimberHighOut = 5;
+    public static final double ClimberSpeed = 0.2;
   }
 
   public static final class ShooterConstants {
