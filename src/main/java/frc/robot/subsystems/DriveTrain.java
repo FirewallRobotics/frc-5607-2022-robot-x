@@ -130,7 +130,6 @@ public class DriveTrain extends SubsystemBase {
         DriveConstants.DriveTrainSpeedMultiplier * x,
         DriveConstants.DriveTrainSpeedMultiplier * turn,
         getHeading());
-    mecanumDrive.driveCartesian(yfilter.calculate(y), xfilter.calculate(x), turn);
   }
 
   // public static void driveToPowerCell() {
