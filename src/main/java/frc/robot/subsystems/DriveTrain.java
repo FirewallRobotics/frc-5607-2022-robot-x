@@ -93,7 +93,7 @@ public class DriveTrain extends SubsystemBase {
   }
 
   public double getHeading() {
-    return m_gyro.getRotation2d().getDegrees();
+    return m_gyro.getAngle();
   }
 
   public double getTurnRate() {
@@ -112,7 +112,6 @@ public class DriveTrain extends SubsystemBase {
     double y = 0; // variable for forward/backward movement
     double x = 0; // variable for side to side movement
     double turn = 0; // variable for turning movement
-    double m_gyro = 0;
     double deadzone = 0.2;
 
     if (ySpeed > deadzone || ySpeed < -deadzone) {
@@ -127,10 +126,10 @@ public class DriveTrain extends SubsystemBase {
       turn = zRotation;
     }
     mecanumDrive.driveCartesian(
-        DriveConstants.DriveTrainSpeedMultiplier * yfilter.calculate(y),
-        DriveConstants.DriveTrainSpeedMultiplier * xfilter.calculate(x),
+        DriveConstants.DriveTrainSpeedMultiplier * y,
+        DriveConstants.DriveTrainSpeedMultiplier * x,
         DriveConstants.DriveTrainSpeedMultiplier * turn,
-        DriveConstants.DriveTrainSpeedMultiplier * m_gyro);
+        getHeading());
   }
 
   // public static void driveToPowerCell() {
