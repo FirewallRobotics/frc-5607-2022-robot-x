@@ -10,7 +10,7 @@
 
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.IndexerConstants;
 
@@ -24,7 +24,7 @@ import frc.robot.Constants.IndexerConstants;
 /** */
 public class Indexer extends SubsystemBase {
   // private static WPI_VictorSPX lowerIntake = new WPI_VictorSPX(IndexerConstants.firstIntake);
-  private WPI_VictorSPX upperIntake = new WPI_VictorSPX(IndexerConstants.secondIntake);
+  private WPI_TalonSRX upperIntake = new WPI_TalonSRX(IndexerConstants.secondIntake);
   // private static DigitalInput Button1 = new DigitalInput(RobotMap.INDEXER_SWITCH_1);
   // private static DigitalInput Button2 = new DigitalInput(RobotMap.INDEXER_SWITCH_2);
   // private static DigitalInput Button3 = new DigitalInput(RobotMap.INDEXER_SWITCH_3);
@@ -109,7 +109,7 @@ public class Indexer extends SubsystemBase {
 
   public void flush() {
     // lowerIntake.set(IndexerConstants.conveyerSpeed);
-    upperIntake.set(IndexerConstants.upperSpeed);
+    upperIntake.set(-IndexerConstants.upperSpeed);
   }
 
   public void flushRunLowerShooter() {}
