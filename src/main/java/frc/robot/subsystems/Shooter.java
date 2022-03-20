@@ -86,8 +86,12 @@ public class Shooter extends SubsystemBase {
     // ShooterConstants.kTimeoutMs);
   }
 
-  public void ShooterStart() {
+  public void HighShooterStart() {
     Shooter.set(ShooterConstants.ShooterStartSpeed);
+  }
+
+  public void LowShooterStart() {
+    Shooter.set(ShooterConstants.LowShooterStartSpeed);
   }
 
   public void ShooterStop() {
