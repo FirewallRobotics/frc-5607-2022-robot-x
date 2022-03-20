@@ -53,7 +53,7 @@ public class Constants {
 
   public static final class IntakeConstants {
 
-    public static final int MoveBot = 9;
+    public static final int MoveBot = 3;
     public static final int SolenoidForwardChannel1 = 0;
     public static final int SolenoidReverseChannel1 = 1;
     public static final int SolenoidForwardChannel2 = 2;
