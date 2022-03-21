@@ -52,9 +52,9 @@ public class AutoGoToCargoCommand extends CommandBase {
       if (x_Blue == center) {
         m_drivetrain.Drive(0.25, 0, 0);
       } else if (x_Blue < center) {
-        m_drivetrain.Drive(0, -0.25, 0);
+        m_drivetrain.Drive(0, 0, -0.25);
       } else if (x_Blue > center) {
-        m_drivetrain.Drive(0, 0.25, 0);
+        m_drivetrain.Drive(0, 0, 0.25);
       }
     } else {
       int center = 160;
@@ -79,9 +79,9 @@ public class AutoGoToCargoCommand extends CommandBase {
       if (x_Red == center) {
         m_drivetrain.Drive(0.25, 0, 0);
       } else if (x_Red < center) {
-        m_drivetrain.Drive(0, -0.25, 0);
+        m_drivetrain.Drive(0, 0, -0.25);
       } else if (x_Red > center) {
-        m_drivetrain.Drive(0, 0.25, 0);
+        m_drivetrain.Drive(0, 0, 0.25);
       }
     }
   }
