@@ -22,8 +22,8 @@ public class Constants {
 
   public static final class DriveConstants {
 
-    public static final int kFrontRightDriveTrain = 7;
-    public static final int kBackRightDriveTrain = 8;
+    public static final int kFrontRightDriveTrain = 8;
+    public static final int kBackRightDriveTrain = 7;
     public static final int kFrontLeftDriveTrain = 6;
     public static final int kBackLeftDriveTrain = 3;
     public static final double DriveTrainSpeedMultiplier = 0.4;
@@ -39,7 +39,8 @@ public class Constants {
     public static final int ClimberMidOut = 3;
     public static final int ClimberHighIn = 4;
     public static final int ClimberHighOut = 5;
-    public static final double ClimberSpeed = 0.2;
+    public static final double RaiseClimberSpeed = 0.5;
+    public static final double RetractClimberSpeed = 0.8;
   }
 
   public static final class ShooterConstants {
@@ -47,14 +48,14 @@ public class Constants {
     public static final int ShooterController1 = 10;
     public static final int LedRelay = 1;
     public static final int autoShootTimeout = 2;
-    public static final double ShooterStartSpeed = 1;
+    public static final double ShooterStartSpeed = .775;
     public static final double LowShooterStartSpeed = 0.2;
     public static final double ShooterStopSpeed = 0;
   }
 
   public static final class IntakeConstants {
 
-    public static final int MoveBot = 3;
+    public static final int MoveBot = 11;
     public static final int SolenoidForwardChannel1 = 0;
     public static final int SolenoidReverseChannel1 = 1;
     public static final int SolenoidForwardChannel2 = 2;
@@ -63,7 +64,7 @@ public class Constants {
 
   public static final class FlushConstants {
 
-    public static final int flushTime = 3;
+    public static final int flushTime = 1;
     public static final int autoShootTime = 3;
   }
 
