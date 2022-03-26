@@ -13,7 +13,7 @@ public class FlushIndexerCommand extends CommandBase {
   }
 
   public void initialize() {
-    // withTimeout(FlushConstants.FlushTime);
+    // withTimeout(FlushConstants.flushTime);
   }
 
   /*

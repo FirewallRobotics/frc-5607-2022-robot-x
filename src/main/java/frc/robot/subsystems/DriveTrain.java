@@ -62,11 +62,19 @@ public class DriveTrain extends SubsystemBase {
         new CANSparkMax(DriveConstants.kBackRightDriveTrain, MotorType.kBrushless);
 
     mecanumDrive = new MecanumDrive(sparkMaxLF, sparkMaxLB, sparkMaxRF, sparkMaxRB);
-    sparkMaxLB.setInverted(true);
+    sparkMaxLF.restoreFactoryDefaults();
+    sparkMaxLB.restoreFactoryDefaults();
+    sparkMaxRF.restoreFactoryDefaults();
+    sparkMaxRB.restoreFactoryDefaults();
+    // sparkMaxLB.setInverted(true);
     sparkMaxRB.setInverted(true);
+    sparkMaxRF.setInverted(true);
+    // sparkMaxRF.setInverted(true);
     addChild("Mecanum Drive", mecanumDrive);
     mecanumDrive.setSafetyEnabled(true);
     mecanumDrive.setExpiration(0.1);
+    // mecanumDrive.setDeadband(0.15);
+    // mecanumDrive.setMaxOutput(DriveConstants.DriveTrainSpeedMultiplier);
     mecanumDrive.setMaxOutput(1.0);
 
     // resetEncoders();
@@ -112,7 +120,7 @@ public class DriveTrain extends SubsystemBase {
     double y = 0; // variable for forward/backward movement
     double x = 0; // variable for side to side movement
     double turn = 0; // variable for turning movement
-    double deadzone = 0.2;
+    double deadzone = 0.15;
 
     if (ySpeed > deadzone || ySpeed < -deadzone) {
       y = ySpeed;
@@ -126,10 +134,10 @@ public class DriveTrain extends SubsystemBase {
       turn = zRotation;
     }
     mecanumDrive.driveCartesian(
-        DriveConstants.DriveTrainSpeedMultiplier * yfilter.calculate(y),
-        DriveConstants.DriveTrainSpeedMultiplier * xfilter.calculate(x),
-        DriveConstants.DriveTrainSpeedMultiplier * turn,
-        getHeading());
+        DriveConstants.DriveTrainSpeedMultiplier * y,
+        DriveConstants.DriveTrainSpeedMultiplier * x,
+        DriveConstants.DriveTrainSpeedMultiplier * turn);
+    //  getHeading();
   }
 
   // public static void driveToPowerCell() {
