@@ -105,7 +105,7 @@ public class Vision extends SubsystemBase {
     SmartDashboard.putNumber("redRadius", red_radius.getDouble(0));
     SmartDashboard.putNumber("xBlue", x_Blue.getDouble(0));
     SmartDashboard.putNumber("yBlue", y_Blue.getDouble(0));
-    SmartDashboard.putNumber("redRadius", blue_radius.getDouble(0));
+    SmartDashboard.putNumber("blueRadius", blue_radius.getDouble(0));
     // This method will be called once per scheduler run
 
   }
