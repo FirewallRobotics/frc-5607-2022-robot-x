@@ -47,6 +47,6 @@ public class AutoDriveCommand extends CommandBase {
 
   @Override
   public void execute() {
-    m_driveTrain.Drive(0, AutoDriveConstants.autoSpeed, 0);
+    m_driveTrain.Drive(-AutoDriveConstants.autoSpeed, 0, 0);
   }
 }

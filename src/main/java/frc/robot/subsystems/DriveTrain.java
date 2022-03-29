@@ -136,7 +136,7 @@ public class DriveTrain extends SubsystemBase {
     mecanumDrive.driveCartesian(
         DriveConstants.DriveTrainSpeedMultiplier * y,
         DriveConstants.DriveTrainSpeedMultiplier * x,
-        DriveConstants.DriveTrainSpeedMultiplier * turn);
+        DriveConstants.DriveTrainTurnSpeedMultiplier * turn);
     //  getHeading();
   }
 

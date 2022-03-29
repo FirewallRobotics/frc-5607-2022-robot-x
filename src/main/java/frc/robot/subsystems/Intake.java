@@ -90,7 +90,7 @@ public class Intake extends SubsystemBase {
 
   public void intakePowerCell() {
     // if (!intakeSwitch.get()){
-    intakeTalon.set(filter.calculate(0.5));
+    intakeTalon.set(0.5);
     // }
     // else{
     //    intakeMotor.set(0);

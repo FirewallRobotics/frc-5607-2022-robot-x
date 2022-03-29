@@ -26,7 +26,8 @@ public class Constants {
     public static final int kBackRightDriveTrain = 7;
     public static final int kFrontLeftDriveTrain = 6;
     public static final int kBackLeftDriveTrain = 3;
-    public static final double DriveTrainSpeedMultiplier = 0.4;
+    public static final double DriveTrainSpeedMultiplier = 1;
+    public static final double DriveTrainTurnSpeedMultiplier = .7;
   }
 
   public static final class ClimbingConstants {
@@ -39,8 +40,8 @@ public class Constants {
     public static final int ClimberMidOut = 3;
     public static final int ClimberHighIn = 4;
     public static final int ClimberHighOut = 5;
-    public static final double RaiseClimberSpeed = 0.5;
-    public static final double RetractClimberSpeed = 0.8;
+    public static final double RaiseClimberSpeed = .9;
+    public static final double RetractClimberSpeed = .9;
   }
 
   public static final class ShooterConstants {
@@ -50,6 +51,7 @@ public class Constants {
     public static final int autoShootTimeout = 2;
     public static final double ShooterStartSpeed = .775;
     public static final double LowShooterStartSpeed = 0.2;
+    public static final double AutoShooterStartSpeed = .7;
     public static final double ShooterStopSpeed = 0;
   }
 
@@ -77,6 +79,6 @@ public class Constants {
   }
 
   public static final class AutoDriveConstants {
-    public static final double autoSpeed = 0.30;
+    public static final double autoSpeed = 0.50;
   }
 }
