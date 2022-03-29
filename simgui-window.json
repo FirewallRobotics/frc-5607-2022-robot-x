@@ -13,7 +13,7 @@
   "Window": {
     "###/LiveWindow/DriveTrain/Mecanum Drive": {
       "Collapsed": "0",
-      "Pos": "496,385",
+      "Pos": "604,25",
       "Size": "300,350"
     },
     "###Addressable LEDs": {
@@ -28,8 +28,8 @@
     },
     "###Joysticks": {
       "Collapsed": "0",
-      "Pos": "189,197",
-      "Size": "796,155"
+      "Pos": "241,371",
+      "Size": "796,172"
     },
     "###NetworkTables": {
       "Collapsed": "0",
