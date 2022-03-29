@@ -90,6 +90,10 @@ public class Shooter extends SubsystemBase {
     Shooter.set(ShooterConstants.ShooterStartSpeed);
   }
 
+  public void AutoShooterStart() {
+    Shooter.set(ShooterConstants.AutoShooterStartSpeed);
+  }
+
   public void LowShooterStart() {
     Shooter.set(ShooterConstants.LowShooterStartSpeed);
   }
