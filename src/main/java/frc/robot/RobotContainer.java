@@ -143,7 +143,7 @@ public class RobotContainer {
     joystickButton1.whenPressed(
         new ParallelCommandGroup(
             new SequentialCommandGroup(
-                new WaitCommand(1), new FlushIndexerCommand(m_indexer).withTimeout(1)),
+                new WaitCommand(.5), new FlushIndexerCommand(m_indexer).withTimeout(1)),
             new ShootingCargoCommand(m_shooter).withTimeout(2)));
     // joystickButton1.whenReleased(new ShootingStopCommand(m_shooter));
     // joystickButton1.whenReleased(new StopIndexerCommand(m_indexer));
@@ -159,7 +159,7 @@ public class RobotContainer {
     joystickButton5.whenPressed(
         new ParallelCommandGroup(
             new SequentialCommandGroup(
-                new WaitCommand(1), new FlushIndexerCommand(m_indexer).withTimeout(1)),
+                new WaitCommand(.5), new FlushIndexerCommand(m_indexer).withTimeout(1)),
             new LowShootingCargoCommand(m_shooter).withTimeout(2)));
     joystickButton6.whileHeld(new ClimberRetractCommand(m_climbing));
     joystickButton6.whenReleased(new ClimberStopCommand(m_climbing));
