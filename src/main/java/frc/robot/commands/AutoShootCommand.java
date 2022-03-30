@@ -22,6 +22,7 @@ public class AutoShootCommand extends CommandBase {
 
   @Override
   public void execute() {
+    isFinished = false;
     long hubXMin = Math.round(m_vision.hubXmin.getDouble(0));
     // long hubYMin = Math.round(m_vision.hubYmin.getDouble(0));
     long hubXMax = Math.round(m_vision.hubXmax.getDouble(0));
