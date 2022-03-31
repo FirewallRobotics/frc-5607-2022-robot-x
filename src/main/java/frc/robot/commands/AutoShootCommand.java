@@ -37,7 +37,7 @@ public class AutoShootCommand extends CommandBase {
     long distanceDif = shootingDistance - distance;
     if (centerDif < 5) {
       // Shoot or whatever
-      // Comment the next 6 lines if we can't get this to drive to the correct spot
+      // Comment the next few lines if we can't get this to drive to the correct spot
       if (Math.abs(distanceDif) < 3) {
         m_drivetrain.Drive(0, 0, 0);
         isFinished = true;
