@@ -30,7 +30,7 @@ public class AutoGoToCargoCommand extends CommandBase {
     double x_Red = Math.round(m_vision.x_Red.getDouble(0));
     double red_radius = Math.round(m_vision.red_radius.getDouble(0));
     if (IsRedAlliance == false) {
-      int center = 160;
+      int center = 320;
       // double x_Red = Math.round(m_vision.x_Red.getDouble(-1));
       // double red_radius = Math.round(m_vision.red_radius.getDouble(-1));
 
@@ -57,7 +57,7 @@ public class AutoGoToCargoCommand extends CommandBase {
         m_drivetrain.Drive(0, 0, 0.25);
       }
     } else {
-      int center = 160;
+      int center = 320;
       // double x_Red = Math.round(m_vision.x_Red.getDouble(-1));
       // double red_radius = Math.round(m_vision.red_radius.getDouble(-1));
 
