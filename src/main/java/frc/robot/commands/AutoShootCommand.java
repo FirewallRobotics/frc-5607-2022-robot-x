@@ -37,13 +37,13 @@ public class AutoShootCommand extends CommandBase {
     if (centerDif < 5) {
       // Shoot or whatever
       // Comment the next 6 lines if we can't get this to drive to the correct spot
-      if (Math.abs(distanceDif) < 5) {
+      if (Math.abs(distanceDif) < 3) {
         m_drivetrain.Drive(0, 0, 0);
         isFinished = true;
       } else if (distanceDif < 0) {
-        m_drivetrain.Drive(-0.15 + (distanceDif / 320), 0, 0);
+        m_drivetrain.Drive(-0.15 + (distanceDif / 640), 0, 0);
       } else {
-        m_drivetrain.Drive(0.15 + (distanceDif / 320), 0, 0);
+        m_drivetrain.Drive(0.15 + (distanceDif / 640), 0, 0);
       }
     } else if (centerOfHub < centerOfFrame) {
       // Move bot left
