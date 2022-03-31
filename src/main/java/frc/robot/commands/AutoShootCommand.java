@@ -1,6 +1,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
 import frc.robot.subsystems.*;
 
 public class AutoShootCommand extends CommandBase {
@@ -22,18 +23,29 @@ public class AutoShootCommand extends CommandBase {
 
   @Override
   public void execute() {
+    isFinished = false;
     long hubXMin = Math.round(m_vision.hubXmin.getDouble(0));
     // long hubYMin = Math.round(m_vision.hubYmin.getDouble(0));
     long hubXMax = Math.round(m_vision.hubXmax.getDouble(0));
     /// long hubYMax = Math.round(m_vision.hubYmax.getDouble(0));
     // long xDif = (hubXMax - hubXMin);
-    long centerOfFrame = 160;
+    long centerOfFrame = Constants.ShooterConstants.CenterOfShootingFrame;
     long centerOfHub = Math.round((hubXMax + hubXMin) / 2);
     long centerDif = Math.abs(centerOfFrame - centerOfHub);
+    long shootingDistance = Constants.ShooterConstants.ShootingDistance;
+    long distance = (hubXMax - hubXMin);
+    long distanceDif = shootingDistance - distance;
     if (centerDif < 5) {
       // Shoot or whatever
-      m_drivetrain.Drive(0, 0, 0);
-      isFinished = true;
+      // Comment the next 6 lines if we can't get this to drive to the correct spot
+      if (Math.abs(distanceDif) < 5) {
+        m_drivetrain.Drive(0, 0, 0);
+        isFinished = true;
+      } else if (distanceDif < 0) {
+        m_drivetrain.Drive(-0.15 + (distanceDif / 320), 0, 0);
+      } else {
+        m_drivetrain.Drive(0.15 + (distanceDif / 320), 0, 0);
+      }
     } else if (centerOfHub < centerOfFrame) {
       // Move bot left
       m_drivetrain.Drive(0, 0, -0.3);

@@ -53,6 +53,8 @@ public class Constants {
     public static final double LowShooterStartSpeed = 0.2;
     public static final double AutoShooterStartSpeed = .7;
     public static final double ShooterStopSpeed = 0;
+    public static final long CenterOfShootingFrame = 160;
+    public static final long ShootingDistance = 100;
   }
 
   public static final class IntakeConstants {
