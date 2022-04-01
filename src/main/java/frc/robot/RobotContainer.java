@@ -143,7 +143,7 @@ public class RobotContainer {
     joystickButton1.whenPressed(
         new ParallelCommandGroup(
             new SequentialCommandGroup(
-                new WaitCommand(.5), new FlushIndexerCommand(m_indexer).withTimeout(1)),
+                new WaitCommand(1), new FlushIndexerCommand(m_indexer).withTimeout(1)),
             new ShootingCargoCommand(m_shooter).withTimeout(2)));
     // joystickButton1.whenReleased(new ShootingStopCommand(m_shooter));
     // joystickButton1.whenReleased(new StopIndexerCommand(m_indexer));
@@ -151,15 +151,20 @@ public class RobotContainer {
     // joystickButton1.whenReleased(new ShootingStopCommand(m_shooter));
     joystickButton2.whileHeld(new IntakeCargoCommand(m_intake));
     joystickButton2.whenReleased(new IntakeStopCommand(m_intake));
-    joystickButton3.whileHeld(new ClimberSemiExtendCommand(m_climbing));
-    joystickButton3.whenReleased(new ClimberStopCommand(m_climbing));
+    // joystickButton3.whileHeld(new ClimberSemiExtendCommand(m_climbing));
+    // joystickButton3.whenReleased(new ClimberStopCommand(m_climbing));
+    joystickButton3.whenPressed(
+        new ParallelCommandGroup(
+            new SequentialCommandGroup(
+                new WaitCommand(1), new FlushIndexerCommand(m_indexer).withTimeout(1)),
+            new MidShootingCargoCommand(m_shooter).withTimeout(2)));
     joystickButton4.whileHeld(new ClimberFullExtendCommand(m_climbing));
     joystickButton4.whenReleased(new ClimberStopCommand(m_climbing));
     // joystickButton5.toggleWhenPressed(new AutoGoToCargoCommand(m_driveTrain, m_vision));
     joystickButton5.whenPressed(
         new ParallelCommandGroup(
             new SequentialCommandGroup(
-                new WaitCommand(.5), new FlushIndexerCommand(m_indexer).withTimeout(1)),
+                new WaitCommand(1), new FlushIndexerCommand(m_indexer).withTimeout(1)),
             new LowShootingCargoCommand(m_shooter).withTimeout(2)));
     joystickButton6.whileHeld(new ClimberRetractCommand(m_climbing));
     joystickButton6.whenReleased(new ClimberStopCommand(m_climbing));
