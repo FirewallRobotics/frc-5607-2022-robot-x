@@ -49,9 +49,9 @@ public class Constants {
     public static final int ShooterController1 = 10;
     public static final int LedRelay = 1;
     public static final int autoShootTimeout = 2;
-    public static final double ShooterStartSpeed = .775;
-    public static final double LowShooterStartSpeed = 0.2;
-    public static final double AutoShooterStartSpeed = .7;
+    public static final double ShooterStartSpeed = .85;
+    public static final double LowShooterStartSpeed = 0.4;
+    public static final double AutoShooterStartSpeed = 0.7;
     public static final double ShooterStopSpeed = 0;
     public static final long CenterOfShootingFrame = 320;
     public static final long ShootingDistance = 8;

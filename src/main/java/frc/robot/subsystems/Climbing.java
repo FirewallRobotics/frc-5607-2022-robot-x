@@ -81,8 +81,8 @@ public class Climbing extends SubsystemBase {
   // Placeholder values used
   public void ClimberFullExtendCommand() {
     /*if (highInput.get() == true) { */
-    talonSRXLC.set(.98);
-    talonSRXRC.set(-ClimbingConstants.RaiseClimberSpeed);
+    talonSRXLC.set(1);
+    talonSRXRC.set(-.70);
     System.out.println("Extending Fully...");
     /*} else {
       talonSRXLC.set(0);
@@ -104,7 +104,7 @@ public class Climbing extends SubsystemBase {
   public void ClimberRetractCommand() {
     // if (lowInput.get() == false) {
     talonSRXLC.set(-ClimbingConstants.RetractClimberSpeed);
-    talonSRXRC.set(ClimbingConstants.RetractClimberSpeed);
+    talonSRXRC.set(.80);
     // } else {
     // talonSRXLC.set(0);
     // talonSRXRC.set(0);
