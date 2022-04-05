@@ -23,6 +23,5 @@ public class IntakeCargoCommand extends CommandBase {
   @Override
   public void execute() {
     m_intake.intakePowerCell();
-    m_intake.extendSolenoid();
   }
 }
