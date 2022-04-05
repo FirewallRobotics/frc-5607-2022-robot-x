@@ -129,7 +129,7 @@ public class Vision extends SubsystemBase {
     long distance = (hubXMax - hubXMin);
     long distanceDif = shootingDistance - distance;
 
-/*    if (centerDif < 5) {
+    /*    if (centerDif < 5) {
       if (Math.abs(distanceDif) < 40) {
         for (int i = 0; i < m_ledBuffer.getLength(); i++) m_ledBuffer.setRGB(i, 0, 255, 0);
       } else if (distanceDif < 0) {
