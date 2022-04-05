@@ -91,7 +91,7 @@ public class Vision extends SubsystemBase {
     m_led = new AddressableLED(1);
 
     /// Deals with length of section (10)
-    m_ledBuffer = new AddressableLEDBuffer(25);
+    m_ledBuffer = new AddressableLEDBuffer(27);
     m_led.setLength(m_ledBuffer.getLength());
 
     for (var i = 0; i < m_ledBuffer.getLength(); i++) m_ledBuffer.setRGB(i, 100, 0, 100);
