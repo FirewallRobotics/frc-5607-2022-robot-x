@@ -22,7 +22,7 @@ public class MidShootingCargoCommand extends CommandBase {
 
   @Override
   public void execute() {
-    m_shooter.AutoShooterStart();
+    m_shooter.MidShooterStart();
   }
 
   @Override

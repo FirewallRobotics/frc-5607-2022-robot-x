@@ -51,7 +51,8 @@ public class Constants {
     public static final int autoShootTimeout = 2;
     public static final double ShooterStartSpeed = .85;
     public static final double LowShooterStartSpeed = 0.4;
-    public static final double AutoShooterStartSpeed = 0.7;
+    public static final double MidShooterStartSpeed = 0.7;
+    public static final double AutoShooterStartSpeed = 0.68;
     public static final double ShooterStopSpeed = 0;
     public static final long CenterOfShootingFrame = 320;
     public static final long ShootingDistance = 8;
