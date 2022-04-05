@@ -1,4 +1,4 @@
-# frc-5607-2022-robot-x
+[![CI](https://github.com/FirewallRobotics/frc-5607-2022-robot-x/actions/workflows/main.yml/badge.svg)](https://github.com/FirewallRobotics/frc-5607-2022-robot-x/actions/workflows/main.yml)# frc-5607-2022-robot-x
 
 ## Master Build Status
 
