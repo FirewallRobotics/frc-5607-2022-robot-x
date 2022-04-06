@@ -47,7 +47,7 @@ public class Constants {
   public static final class ShooterConstants {
 
     public static final int ShooterController1 = 10;
-    public static final int ShooterController2 = 9;
+    public static final int ShooterController2 = 20;
     public static final int LedRelay = 1;
     public static final int autoShootTimeout = 2;
     public static final double ShooterStartSpeed = .85;
