@@ -28,8 +28,10 @@ import frc.robot.SparkMaxSimulator;
 public class Shooter extends SubsystemBase {
 
   // private static WPI_TalonSRX Turret = new WPI_TalonSRX(ShooterConstants.TURRET_ADDRESS);
-  public CANSparkMax Shooter =
+  public CANSparkMax ShooterMotor1 =
       new SparkMaxSimulator(ShooterConstants.ShooterController1, MotorType.kBrushless);
+  public CANSparkMax ShooterMotor2 =
+      new SparkMaxSimulator(ShooterConstants.ShooterController2, MotorType.kBrushless);
 
   /*  private static DigitalOutput ledRing = new DigitalOutput(
     ShooterConstants.LedRelay
@@ -50,8 +52,11 @@ public class Shooter extends SubsystemBase {
   /** */
   public Shooter() {
     // Turret.configFactoryDefault();
-    Shooter.restoreFactoryDefaults();
-    Shooter.setIdleMode(IdleMode.kBrake);
+    ShooterMotor1.restoreFactoryDefaults();
+    ShooterMotor1.setIdleMode(IdleMode.kBrake);
+    ShooterMotor2.restoreFactoryDefaults();
+    ShooterMotor2.setIdleMode(IdleMode.kBrake);
+    ShooterMotor2.setInverted(true);
     // Shooter2.configFactoryDefault();
     // Turret.configSelectedFeedbackSensor(FeedbackDevice.PulseWidthEncodedPosition);
     // Shooter.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
@@ -87,30 +92,36 @@ public class Shooter extends SubsystemBase {
   }
 
   public void HighShooterStart() {
-    Shooter.set(ShooterConstants.ShooterStartSpeed);
+    ShooterMotor1.set(ShooterConstants.ShooterStartSpeed);
+    ShooterMotor2.set(ShooterConstants.ShooterStartSpeed);
   }
 
   public void MidShooterStart() {
-    Shooter.set(ShooterConstants.MidShooterStartSpeed);
+    ShooterMotor1.set(ShooterConstants.MidShooterStartSpeed);
+    ShooterMotor2.set(ShooterConstants.MidShooterStartSpeed);
   }
 
   public void AutoShooterStart() {
-    Shooter.set(ShooterConstants.AutoShooterStartSpeed);
+    ShooterMotor1.set(ShooterConstants.AutoShooterStartSpeed);
+    ShooterMotor2.set(ShooterConstants.AutoShooterStartSpeed);
   }
 
   public void LowShooterStart() {
-    Shooter.set(ShooterConstants.LowShooterStartSpeed);
+    ShooterMotor1.set(ShooterConstants.LowShooterStartSpeed);
+    ShooterMotor2.set(ShooterConstants.LowShooterStartSpeed);
   }
 
   public void ShooterStop() {
-    Shooter.set(ShooterConstants.ShooterStopSpeed);
+    ShooterMotor1.set(ShooterConstants.ShooterStopSpeed);
+    ShooterMotor2.set(ShooterConstants.ShooterStopSpeed);
   }
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
     // SmartDashboard.putNumber("Turret Encoder", getMeasurement());
-    SmartDashboard.putNumber("Shooter Speed", getShooterSpeed());
+    SmartDashboard.putNumber("Shooter Speed", getShooter1Speed());
+    // Line for Shooter1 is not required, as they both will go at the same speed.
     // SmartDashboard.putBoolean("ledRing.get", ledRing.get());
   }
 
@@ -122,8 +133,12 @@ public class Shooter extends SubsystemBase {
 
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-  double getShooterSpeed() {
-    return Shooter.getEncoder().getVelocity();
+  double getShooter1Speed() {
+    return ShooterMotor1.getEncoder().getVelocity();
+  }
+
+  double getShooter2Speed() {
+    return ShooterMotor2.getEncoder().getVelocity();
   }
   // double getMeasurement() {
   //    return encoder.getPwmPosition();
