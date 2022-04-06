@@ -32,10 +32,3 @@ jobs:
     # Runs a single command using the runners shell
     - name: Compile and run tests on robot code
       run: ./gradlew build
-
-    # Generate and publish Javadocs
-    - name: Generate and publish Javadocs 🚀
-      uses: MathieuSoysal/Javadoc-publisher.yml@v2.0.3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        java-version: 17
