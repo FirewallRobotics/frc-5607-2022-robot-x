@@ -176,7 +176,8 @@ public class RobotContainer {
     joystickButton6.whenReleased(new ClimberStopCommand(m_climbing));
     firstA.whenPressed(new ExtendIntakeCommand(m_intake));
     firstB.whenPressed(new RetractIntakeCommand(m_intake));
-    firstY.whenPressed(new AutoShootCommand(m_driveTrain, m_vision));
+    firstY.whileHeld(new LowShootingCargoCommand(m_shooter));
+    firstY.whenReleased(new ShootingStopCommand(m_shooter));
     firstLB.whileHeld(new FlushIndexerCommand(m_indexer));
     firstLB.whenReleased(new StopIndexerCommand(m_indexer));
     firstX.whenPressed(
