@@ -124,15 +124,15 @@ public class Vision extends SubsystemBase {
 
     long hubXMin = Math.round(hubXmin.getDouble(0));
     long hubXMax = Math.round(hubXmax.getDouble(0));
-    long centerOfFrame = 320;
+    long centerOfFrame = 285;
     long centerOfHub = Math.round((hubXMax + hubXMin) / 2);
     long centerDif = Math.abs(centerOfFrame - centerOfHub);
     long shootingDistance = Constants.ShooterConstants.ShootingDistance;
     long distance = (hubXMax - hubXMin);
     long distanceDif = shootingDistance - distance;
 
-    /*    if (centerDif < 5) {
-      if (Math.abs(distanceDif) < 40) {
+    if (centerDif < 25) {
+      if (Math.abs(distanceDif) < 100) {
         for (int i = 0; i < m_ledBuffer.getLength(); i++) m_ledBuffer.setRGB(i, 0, 255, 0);
       } else if (distanceDif < 0) {
         // too close
@@ -147,7 +147,7 @@ public class Vision extends SubsystemBase {
     } else if (centerOfHub > centerOfFrame) {
       // to the right
       for (int i = 0; i < m_ledBuffer.getLength(); i++) m_ledBuffer.setRGB(i, 255, 0, 0);
-    }*/
+    }
     m_led.setData(m_ledBuffer);
   }
 
