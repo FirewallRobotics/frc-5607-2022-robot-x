@@ -35,7 +35,7 @@ public class AutoShootCommand extends CommandBase {
     long shootingDistance = Constants.ShooterConstants.ShootingDistance;
     long distance = (hubXMax - hubXMin);
     long distanceDif = shootingDistance - distance;
-    if (centerDif < 5) {
+    if (centerDif < 25) {
       // Shoot or whatever
       // Comment the next few lines if we can't get this to drive to the correct spot
       if (Math.abs(distanceDif) < 3) {
