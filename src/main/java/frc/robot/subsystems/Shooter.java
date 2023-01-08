@@ -121,6 +121,7 @@ public class Shooter extends SubsystemBase {
     // This method will be called once per scheduler run
     // SmartDashboard.putNumber("Turret Encoder", getMeasurement());
     SmartDashboard.putNumber("Shooter Speed", getShooter1Speed());
+    SmartDashboard.putNumber("Shooter 2 Speed", getShooter2Speed());
     // Line for Shooter1 is not required, as they both will go at the same speed.
     // SmartDashboard.putBoolean("ledRing.get", ledRing.get());
   }
